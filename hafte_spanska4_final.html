@@ -1,0 +1,2226 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Provförberedande Häfte — Spanska 4</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream:#F7F2EA; --cream-dark:#EDE6D6; --ink:#1C1810; --ink-soft:#3D3528; --ink-muted:#6B6050;
+  --gold:#B8860B; --gold-light:#F0D070; --gold-pale:#FAF0C0;
+  --m1:#2C5F8A; --m1-l:#E8F2FA;
+  --m2:#B85C1A; --m2-l:#FDF0E6;
+  --m3:#207060; --m3-l:#E6F4F0;
+  --m4:#6B3E8F; --m4-l:#F2ECF8;
+  --m5:#8B1A1A; --m5-l:#F8ECEC;
+  --facit:#2A4A1E; --facit-l:#EBF4E6;
+  --hor:#1a3050; --hor-l:#E8EEF8;
+  --las:#5c3a00; --las-l:#FDF5E6;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:'Lora',Georgia,serif;font-size:16px;line-height:1.75}
+
+/* NAV */
+#topnav{position:sticky;top:0;z-index:100;background:var(--ink);padding:0 1.2rem;display:flex;align-items:center;gap:.15rem;overflow-x:auto;scrollbar-width:none;box-shadow:0 3px 12px rgba(0,0,0,.2)}
+#topnav::-webkit-scrollbar{display:none}
+.nav-logo{color:var(--gold-light);font-family:'Playfair Display',serif;font-size:.8rem;font-style:italic;white-space:nowrap;padding-right:.9rem;border-right:1px solid #444;margin-right:.4rem}
+.nav-btn{display:inline-flex;align-items:center;gap:.35rem;padding:.7rem .85rem;background:none;border:none;border-bottom:3px solid transparent;color:#bbb;font-family:'Lora',serif;font-size:.78rem;cursor:pointer;white-space:nowrap;transition:all .2s;text-decoration:none}
+.nav-btn:hover{color:#fff}
+.nav-btn.m1{border-bottom-color:var(--m1);color:#fff}
+.nav-btn.m2{border-bottom-color:var(--m2);color:#fff}
+.nav-btn.m3{border-bottom-color:var(--m3);color:#fff}
+.nav-btn.m4{border-bottom-color:var(--m4);color:#fff}
+.nav-btn.m5{border-bottom-color:var(--m5);color:#fff}
+.nav-btn.facit-nav{border-bottom-color:var(--gold);color:var(--gold-light)}
+.ndot{width:7px;height:7px;border-radius:50%;display:inline-block;flex-shrink:0}
+
+/* HERO */
+.hero{background:var(--ink);background-image:radial-gradient(ellipse at 20% 50%,rgba(44,95,138,.3) 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(139,26,26,.2) 0%,transparent 60%);color:#fff;padding:3.5rem 2rem 2.5rem;text-align:center}
+.hero-tag{display:inline-block;background:var(--gold);color:var(--ink);font-family:'Source Code Pro',monospace;font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .8rem;border-radius:2px;margin-bottom:1rem}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3rem);font-weight:700;line-height:1.15;margin-bottom:.4rem}
+.hero h1 em{color:var(--gold-light);font-style:italic}
+.hero-sub{color:#999;font-size:.88rem;font-style:italic;margin-bottom:1.8rem}
+.hero-box{display:inline-block;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:.9rem 1.4rem;font-size:.85rem;color:#ccc;max-width:600px;text-align:left}
+.hero-box strong{color:var(--gold-light)}
+
+/* PAGE */
+.page{max-width:880px;margin:0 auto;padding:2rem 1.5rem 5rem}
+
+/* MODULE */
+.module{margin-bottom:5rem;border-radius:14px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.12);background:#fff}
+.module-header{padding:1.8rem 2.2rem 1.4rem;color:#fff;position:relative;overflow:hidden}
+.module-header::after{content:attr(data-num);position:absolute;right:1.5rem;bottom:-1.2rem;font-family:'Playfair Display',serif;font-size:7rem;font-weight:700;opacity:.07;line-height:1;pointer-events:none}
+.module-header .mtag{font-family:'Source Code Pro',monospace;font-size:.68rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;opacity:.75;margin-bottom:.4rem}
+.module-header h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:700;line-height:1.2;margin-bottom:.3rem}
+.module-header .msub{font-style:italic;opacity:.82;font-size:.88rem}
+.m1 .module-header{background:linear-gradient(135deg,var(--m1),#1a3f60)}
+.m2 .module-header{background:linear-gradient(135deg,var(--m2),#7a2e00)}
+.m3 .module-header{background:linear-gradient(135deg,var(--m3),#104838)}
+.m4 .module-header{background:linear-gradient(135deg,var(--m4),#3a1860)}
+.m5 .module-header{background:linear-gradient(135deg,var(--m5),#500000)}
+.module-body{padding:2rem 2.2rem}
+
+/* CURRICULUM TABLE */
+.ctable{width:100%;border-collapse:collapse;font-size:.84rem;margin-bottom:2rem;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.07)}
+.ctable thead tr{background:var(--ink);color:#fff}
+.ctable th{padding:.6rem .9rem;text-align:left;font-family:'Source Code Pro',monospace;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.ctable tbody tr:nth-child(odd){background:var(--cream)}
+.ctable tbody tr:nth-child(even){background:var(--cream-dark)}
+.ctable td{padding:.5rem .9rem;vertical-align:top}
+.ctable em{font-style:italic;color:var(--ink-muted)}
+
+/* SECTION BANNERS */
+.sec-banner{display:flex;align-items:center;gap:.8rem;padding:.8rem 1.2rem;border-radius:8px;margin:2rem 0 1.2rem;font-family:'Source Code Pro',monospace;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.sec-banner .sec-icon{font-size:1.1rem}
+.sec-banner .sec-title{flex:1}
+.sec-banner .sec-type{opacity:.7;font-size:.68rem}
+.banner-hor{background:var(--hor);color:#fff}
+.banner-las{background:var(--las);color:#fff}
+.banner-gram{background:var(--ink-soft);color:#fff}
+.banner-kult{background:var(--facit);color:#fff}
+.banner-np{background:#2a1a4a;color:#fff}
+
+/* AUDIO PLAYER */
+.audio-wrap{background:var(--ink);border-radius:10px;padding:1.1rem 1.4rem;margin-bottom:1.2rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.audio-ball{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex-shrink:0;color:#fff}
+.m1 .audio-ball{background:var(--m1)} .m2 .audio-ball{background:var(--m2)} .m3 .audio-ball{background:var(--m3)} .m4 .audio-ball{background:var(--m4)} .m5 .audio-ball{background:var(--m5)}
+.np-audio-ball{background:#5a3a9a}
+.audio-info{flex:1;min-width:140px}
+.audio-name{color:#fff;font-family:'Playfair Display',serif;font-size:.9rem;font-style:italic;margin-bottom:.2rem}
+.audio-file{color:#888;font-family:'Source Code Pro',monospace;font-size:.7rem}
+audio{flex:2;min-width:180px;height:34px;accent-color:var(--gold)}
+
+/* STEP GUIDE */
+.step-guide{display:flex;gap:.8rem;flex-wrap:wrap;background:var(--hor-l);border:1px solid rgba(26,48,80,.15);border-radius:8px;padding:.9rem 1.1rem;margin-bottom:1.2rem;font-size:.83rem}
+.step-item{display:flex;align-items:flex-start;gap:.45rem}
+.step-num{background:var(--hor);color:#fff;font-family:'Source Code Pro',monospace;font-size:.7rem;font-weight:700;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.05rem}
+.step-las .step-num{background:var(--las)}
+
+/* TEXT BOX */
+.text-box{background:var(--cream);border-left:4px solid;border-radius:0 8px 8px 0;padding:1.3rem 1.6rem;margin:1rem 0 1.8rem;font-size:.93rem;line-height:1.9}
+.m1 .text-box{border-color:var(--m1)} .m2 .text-box{border-color:var(--m2)} .m3 .text-box{border-color:var(--m3)} .m4 .text-box{border-color:var(--m4)} .m5 .text-box{border-color:var(--m5)}
+.text-box p{margin-bottom:.8rem} .text-box p:last-child{margin-bottom:0}
+.text-box .dlg{font-style:italic;color:var(--ink-soft)}
+
+/* QUESTIONS */
+.q-hdr{font-family:'Source Code Pro',monospace;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin:1.8rem 0 .8rem;display:flex;align-items:center;gap:.5rem}
+.q-hdr::after{content:'';flex:1;height:1px;background:var(--cream-dark)}
+.qcard{background:var(--cream);border-radius:8px;padding:1rem 1.3rem;margin-bottom:.9rem;border:1px solid var(--cream-dark)}
+.qtag{font-family:'Source Code Pro',monospace;font-size:.7rem;font-weight:700;color:#fff;background:var(--ink-muted);padding:.12rem .45rem;border-radius:3px;margin-right:.4rem}
+.qtype{font-size:.76rem;font-style:italic;color:var(--ink-muted)}
+.qtext{margin-top:.5rem;font-size:.91rem}
+.opts{list-style:none;margin-top:.5rem}
+.opts li{padding:.3rem .5rem;border-radius:4px;font-size:.87rem}
+.opts li:hover{background:var(--cream-dark)}
+.opts li::before{content:attr(data-o);font-family:'Source Code Pro',monospace;font-weight:700;margin-right:.45rem;color:var(--ink-muted)}
+.vf-tbl{width:100%;border-collapse:collapse;font-size:.86rem;margin-top:.6rem}
+.vf-tbl th{background:var(--ink);color:#fff;padding:.45rem .8rem;text-align:left;font-weight:600;font-size:.76rem}
+.vf-tbl td{padding:.5rem .8rem;border-bottom:1px solid var(--cream-dark);vertical-align:top}
+.vf-tbl td:nth-child(2){width:55px;font-family:'Source Code Pro',monospace;font-weight:700;color:var(--ink-muted);text-align:center}
+.vf-tbl tr:last-child td{border-bottom:none}
+
+/* GRAMMAR TABLES */
+.gtbl{width:100%;border-collapse:collapse;font-size:.85rem;margin:.7rem 0 1.4rem;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.07)}
+.gtbl th{background:var(--ink-soft);color:#fff;padding:.5rem .8rem;text-align:left;font-weight:600;font-size:.76rem}
+.gtbl td{padding:.5rem .8rem;border-bottom:1px solid var(--cream-dark)}
+.gtbl tr:nth-child(odd) td{background:var(--cream)}
+.gtbl tr:nth-child(even) td{background:#fff}
+.gtbl tr:last-child td{border-bottom:none}
+.blank{border-bottom:1.5px solid var(--ink-muted) !important;background:transparent !important;min-width:110px}
+.fl{display:inline-block;width:130px;border-bottom:1.5px solid var(--ink-soft);margin:0 .2rem;vertical-align:bottom}
+
+/* EXERCISE BLOCKS */
+.ex-block{background:#fff;border:1px solid var(--cream-dark);border-radius:8px;padding:1.2rem 1.5rem;margin-bottom:1.3rem}
+.ex-inst{font-size:.86rem;font-style:italic;color:var(--ink-muted);margin-bottom:.9rem;padding:.55rem .85rem;background:var(--cream);border-radius:5px;border-left:3px solid var(--gold)}
+.ex-wb{font-family:'Source Code Pro',monospace;font-size:.8rem;color:var(--ink-soft);background:var(--cream-dark);padding:.45rem .85rem;border-radius:5px;margin-bottom:.8rem}
+.ex-list{list-style:none}
+.ex-list li{padding:.5rem 0;border-bottom:1px solid var(--cream-dark);font-size:.9rem;display:flex;gap:.45rem;align-items:flex-start}
+.ex-list li:last-child{border-bottom:none}
+.ex-list li .n{font-family:'Source Code Pro',monospace;font-size:.76rem;font-weight:700;color:var(--ink-muted);min-width:22px;padding-top:.1rem}
+.ex-h{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;margin:1.8rem 0 .4rem;padding-bottom:.35rem;border-bottom:2px solid var(--cream-dark)}
+.ex-h small{font-family:'Lora',serif;font-size:.8rem;font-weight:400;font-style:italic;color:var(--ink-muted);margin-left:.45rem}
+
+/* NP FORMAT */
+.np-box{background:#f4f0fa;border:1.5px solid #8a6ab0;border-radius:10px;padding:1.3rem 1.6rem;margin-bottom:1.5rem}
+.np-inst-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#4a2a7a;margin-bottom:.5rem}
+.np-inst-text{font-size:.86rem;color:var(--ink-soft);margin-bottom:1rem}
+.np-topics{display:grid;grid-template-columns:1fr 1fr;gap:.3rem .8rem;margin-bottom:1.2rem}
+.np-topic{font-size:.83rem;display:flex;gap:.4rem}
+.np-topic .tl{font-family:'Source Code Pro',monospace;font-weight:700;color:#4a2a7a;min-width:18px}
+.np-clips{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.8rem;margin-bottom:1.2rem}
+.np-clip{background:#fff;border:1px solid #c0a8e0;border-radius:8px;padding:.8rem 1rem}
+.np-clip-num{font-family:'Source Code Pro',monospace;font-size:.72rem;font-weight:700;color:#4a2a7a;margin-bottom:.3rem}
+.np-clip audio{width:100%;height:30px;margin-top:.3rem;accent-color:#6B3E8F}
+.np-answer{width:100%;border-collapse:collapse;font-size:.85rem;margin-top:.5rem}
+.np-answer th{background:#4a2a7a;color:#fff;padding:.5rem .7rem;font-size:.76rem;text-align:center}
+.np-answer td{padding:.55rem .7rem;border:1px solid #c0a8e0;text-align:center;font-family:'Source Code Pro',monospace;font-weight:600}
+.np-answer td:first-child{text-align:left;font-family:'Lora',serif;font-weight:400;font-style:italic}
+.np-answer tr:nth-child(odd) td{background:#faf8ff}
+.np-answer tr:nth-child(even) td{background:#fff}
+
+/* CULTURE BOX */
+.kult-box{background:linear-gradient(135deg,var(--facit-l),#fff);border:1.5px solid var(--facit);border-radius:12px;padding:1.4rem 1.7rem;margin-top:2.2rem}
+.kult-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--facit);margin-bottom:.5rem}
+.kult-prompt{font-size:.9rem;margin-bottom:.7rem}
+.kult-box ul{padding-left:1.3rem;font-size:.88rem;color:var(--ink-soft)}
+.kult-box li{margin-bottom:.3rem}
+.kult-note{margin-top:.85rem;font-size:.81rem;font-style:italic;color:var(--ink-muted);background:var(--cream);padding:.5rem .85rem;border-radius:5px}
+
+/* DIVIDER */
+.sdiv{border:none;border-top:2px solid var(--cream-dark);margin:2.2rem 0}
+
+/* FACIT */
+#facit-section{margin-bottom:5rem}
+.facit-head{background:linear-gradient(135deg,var(--facit),#1a3010);color:#fff;padding:1.8rem 2.2rem;border-radius:12px 12px 0 0}
+.facit-head h2{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;margin-bottom:.25rem}
+.facit-head p{font-size:.86rem;opacity:.72;font-style:italic}
+details.fm{background:#fff;border:1px solid var(--cream-dark);border-top:none}
+details.fm:last-child{border-radius:0 0 12px 12px}
+details.fm summary{cursor:pointer;padding:.9rem 1.4rem;font-family:'Playfair Display',serif;font-size:.97rem;font-weight:700;display:flex;align-items:center;gap:.7rem;user-select:none;list-style:none;border-left:5px solid}
+details.fm:nth-child(1) summary{border-color:var(--m1)}
+details.fm:nth-child(2) summary{border-color:var(--m2)}
+details.fm:nth-child(3) summary{border-color:var(--m3)}
+details.fm:nth-child(4) summary{border-color:var(--m4)}
+details.fm:nth-child(5) summary{border-color:var(--m5)}
+details.fm summary::-webkit-details-marker{display:none}
+details.fm summary .arr{margin-left:auto;transition:transform .2s;color:var(--ink-muted);font-size:.78rem}
+details.fm[open] summary .arr{transform:rotate(90deg)}
+details.fm summary:hover{background:var(--cream)}
+.fb{padding:1.1rem 1.7rem 1.4rem;background:var(--facit-l);font-size:.88rem}
+.fs{margin-bottom:1.4rem}
+.fs h4{font-family:'Source Code Pro',monospace;font-size:.73rem;font-weight:700;color:var(--facit);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem;padding-bottom:.25rem;border-bottom:1px solid rgba(42,74,30,.2)}
+.fa{list-style:none}
+.fa li{padding:.32rem 0;border-bottom:1px solid rgba(42,74,30,.1);display:flex;gap:.5rem}
+.fa li:last-child{border-bottom:none}
+.fa .fn{font-family:'Source Code Pro',monospace;font-size:.76rem;font-weight:700;color:var(--facit);min-width:30px}
+.ac{color:#1a5c0a;font-weight:600}
+.an{color:var(--ink-muted);font-style:italic;font-size:.84rem}
+.ctb{width:100%;border-collapse:collapse;font-size:.82rem}
+.ctb th{background:rgba(42,74,30,.15);padding:.38rem .55rem;text-align:center;font-weight:700}
+.ctb td{padding:.38rem .55rem;text-align:center;border-bottom:1px solid rgba(42,74,30,.1)}
+.ctb td:first-child{text-align:left;font-style:italic;font-weight:600}
+
+
+/* ── TAB NAVIGATION ── */
+.tab-panel { display: none }
+.tab-panel.active { display: block }
+
+.nav-btn-tab { display:inline-flex;align-items:center;gap:.35rem;padding:.7rem .85rem;background:none;border:none;border-bottom:3px solid transparent;color:#bbb;font-family:'Lora',serif;font-size:.78rem;cursor:pointer;white-space:nowrap;transition:all .2s }
+.nav-btn-tab:hover { color:#fff }
+.nav-btn-tab.active { color:#fff }
+.nav-btn-tab[data-tab="welcome"].active { border-bottom-color:var(--gold-light) }
+.nav-btn-tab[data-tab="m1"].active { border-bottom-color:var(--m1) }
+.nav-btn-tab[data-tab="m2"].active { border-bottom-color:var(--m2) }
+.nav-btn-tab[data-tab="m3"].active { border-bottom-color:var(--m3) }
+.nav-btn-tab[data-tab="m4"].active { border-bottom-color:var(--m4) }
+.nav-btn-tab[data-tab="m5"].active { border-bottom-color:var(--m5) }
+.nav-btn-tab[data-tab="facit"].active { border-bottom-color:var(--gold);color:var(--gold-light) }
+
+/* Startsida — modulkort */
+.start-cards { display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1.5rem }
+.start-card { background:#fff;border-radius:12px;padding:1.4rem 1.6rem;cursor:pointer;border:2px solid transparent;transition:all .2s;box-shadow:0 2px 10px rgba(0,0,0,.08) }
+.start-card:hover { transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.14) }
+.start-card .sc-tag { font-family:'Source Code Pro',monospace;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.4rem }
+.start-card h3 { font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:.3rem }
+.start-card p { font-size:.82rem;color:var(--ink-muted);font-style:italic }
+.start-card[data-tab="m1"] { border-color:var(--m1) } .start-card[data-tab="m1"] .sc-tag { color:var(--m1) }
+.start-card[data-tab="m2"] { border-color:var(--m2) } .start-card[data-tab="m2"] .sc-tag { color:var(--m2) }
+.start-card[data-tab="m3"] { border-color:var(--m3) } .start-card[data-tab="m3"] .sc-tag { color:var(--m3) }
+.start-card[data-tab="m4"] { border-color:var(--m4) } .start-card[data-tab="m4"] .sc-tag { color:var(--m4) }
+.start-card[data-tab="m5"] { border-color:var(--m5) } .start-card[data-tab="m5"] .sc-tag { color:var(--m5) }
+.start-card[data-tab="facit"] { border-color:var(--facit) } .start-card[data-tab="facit"] .sc-tag { color:var(--facit) }
+
+
+/* ── STEG 2: INTERAKTIVITET ── */
+
+/* MC */
+.mc-opts { display:flex; flex-direction:column; gap:.35rem; margin-top:.5rem }
+.mc-opt  { padding:.52rem .9rem; border-radius:6px; font-size:.88rem; cursor:pointer;
+  border:1.5px solid var(--cream-dark); background:var(--cream);
+  transition:border-color .12s,background .12s; user-select:none }
+.mc-opt::before { font-family:'Source Code Pro',monospace; font-weight:700;
+  margin-right:.5rem; color:var(--ink-muted); font-size:.78rem }
+.mc-opt[data-v="a"]::before{content:"A)"}
+.mc-opt[data-v="b"]::before{content:"B)"}
+.mc-opt[data-v="c"]::before{content:"C)"}
+.mc-opt[data-v="d"]::before{content:"D)"}
+.mc-opt:hover       { border-color:var(--ink-muted); background:var(--cream-dark) }
+.mc-opt.mc-sel      { border-color:var(--ink-soft); background:#e8e0d4; font-weight:600 }
+.mc-opt.mc-correct  { border-color:#1a6b1a; background:#e6f4e6; color:#1a6b1a; font-weight:600 }
+.mc-opt.mc-wrong    { border-color:#a01010; background:#faeaea; color:#a01010 }
+
+/* VF */
+.vf-tbl td:nth-child(2) { width:90px; vertical-align:middle }
+.vf-btn-wrap { display:flex; gap:.4rem }
+.vfb         { padding:.28rem .65rem; border:1.5px solid var(--cream-dark);
+  background:var(--cream); border-radius:5px; font-family:'Source Code Pro',monospace;
+  font-size:.82rem; font-weight:700; cursor:pointer; transition:all .12s }
+.vfb:hover      { background:var(--cream-dark) }
+.vfb.vfb-sel    { border-color:var(--ink-soft); background:#e8e0d4 }
+.vfb.vfb-correct{ border-color:#1a6b1a; background:#e6f4e6; color:#1a6b1a }
+.vfb.vfb-wrong  { border-color:#a01010; background:#faeaea; color:#a01010 }
+
+/* NP */
+.np-sel-row { display:grid; grid-template-columns:repeat(8,1fr);
+  gap:.4rem; margin-bottom:.9rem }
+.np-cell       { text-align:center }
+.np-cell label { font-family:'Source Code Pro',monospace; font-size:.75rem;
+  font-weight:700; color:#4a2a7a; display:block; margin-bottom:.2rem }
+.np-sel { width:100%; padding:.3rem .1rem; border:1.5px solid #c0a8e0;
+  border-radius:5px; font-family:'Source Code Pro',monospace;
+  font-size:.82rem; text-align:center; background:#fff; cursor:pointer }
+.np-sel.np-correct { border-color:#1a6b1a; background:#e6f4e6 }
+.np-sel.np-wrong   { border-color:#a01010; background:#faeaea }
+
+/* Rätta-wrap */
+.ratta-wrap { margin:1.8rem 0 .4rem; padding:1.2rem 1.5rem;
+  background:linear-gradient(135deg,#f5f0fa,#fff);
+  border:1.5px solid #8a6ab0; border-radius:12px; text-align:center }
+.ratta-btn  { padding:.6rem 1.8rem; background:#4a2a7a; color:#fff; border:none;
+  border-radius:22px; font-family:'Source Code Pro',monospace; font-size:.86rem;
+  font-weight:700; cursor:pointer; letter-spacing:.05em;
+  box-shadow:0 3px 10px rgba(74,42,122,.25); transition:background .15s }
+.ratta-btn:hover { background:#2a1a5a }
+.ratta-note { font-size:.78rem; color:var(--ink-muted); font-style:italic; margin-top:.45rem }
+.ratta-result { margin-top:1rem; padding:.9rem 1.2rem;
+  border-radius:10px; display:none }
+.ratta-result.rr-show { display:block }
+.rr-score { font-family:'Playfair Display',serif; font-size:2rem;
+  font-weight:700; margin-bottom:.2rem }
+.rr-msg   { font-size:.9rem; font-style:italic; color:var(--ink-soft) }
+.ratta-result.rr-perfect{ background:#e6f4e6; border:1.5px solid #1a6b1a }
+.ratta-result.rr-perfect .rr-score{ color:#1a6b1a }
+.ratta-result.rr-good   { background:#fff8e6; border:1.5px solid #996600 }
+.ratta-result.rr-good   .rr-score{ color:#996600 }
+.ratta-result.rr-try    { background:#faeaea; border:1.5px solid #a01010 }
+.ratta-result.rr-try    .rr-score{ color:#a01010 }
+
+/* Grammatik – input-fält */
+input.fl-input { border:none; border-bottom:1.5px solid var(--ink-soft);
+  background:transparent; font-family:'Lora',serif; font-size:.9rem;
+  padding:.1rem .2rem; margin:0 .2rem; vertical-align:bottom;
+  width:120px; outline:none; color:var(--ink) }
+input.fl-input:focus { border-bottom-color:var(--m1); background:var(--gold-pale) }
+
+/* Visa-svar-knappar */
+.show-btn { display:inline-flex; align-items:center; gap:.4rem; margin-top:.9rem;
+  padding:.42rem .9rem; background:var(--ink-soft); color:#fff; border:none;
+  border-radius:20px; font-family:'Source Code Pro',monospace; font-size:.78rem;
+  font-weight:600; cursor:pointer; transition:background .15s }
+.show-btn:hover { background:var(--ink) }
+.ans-panel { margin-top:.7rem; background:#ebf4e6;
+  border:1px solid rgba(26,107,26,.2); border-radius:8px;
+  padding:.85rem 1.1rem; display:none }
+.ans-panel.ap-open { display:block }
+.ans-panel .fa { list-style:none }
+.ans-panel .fa li { padding:.28rem 0; border-bottom:1px solid rgba(26,107,26,.1);
+  display:flex; gap:.5rem; flex-wrap:wrap; font-size:.88rem }
+.ans-panel .fa li:last-child { border-bottom:none }
+.ans-panel .fan { font-family:'Source Code Pro',monospace; font-size:.76rem;
+  font-weight:700; color:#1a5c0a; min-width:28px }
+.ans-panel .fac { color:#1a6b1a; font-weight:600 }
+.ans-panel .ctb { width:100%; border-collapse:collapse; font-size:.82rem }
+.ans-panel .ctb th { background:rgba(26,107,26,.15); padding:.32rem .5rem;
+  text-align:center }
+.ans-panel .ctb td { padding:.3rem .5rem; text-align:center;
+  border-bottom:1px solid rgba(26,107,26,.08);
+  color:#1a6b1a; font-weight:600 }
+.ans-panel .ctb td:first-child { text-align:left; font-style:italic;
+  font-weight:600; color:var(--ink) }
+
+/* Öppna frågor */
+.open-ta { width:100%; margin-top:.6rem; border:1.5px solid var(--cream-dark);
+  border-radius:6px; padding:.6rem .85rem; font-family:'Lora',serif;
+  font-size:.88rem; resize:vertical; background:var(--cream); min-height:65px }
+.open-ta:focus { outline:none; border-color:var(--ink-muted) }
+
+@media(max-width:600px){ .np-sel-row{ grid-template-columns:repeat(4,1fr) } }
+
+
+/* ── STEG 3: LJUD-HJÄLP ── */
+
+/* Modal overlay */
+.modal-overlay {
+  display:none; position:fixed; inset:0; z-index:9000;
+  background:rgba(0,0,0,.55); backdrop-filter:blur(3px);
+  align-items:center; justify-content:center; padding:1rem;
+}
+.modal-overlay.mo-open { display:flex }
+.modal-box {
+  background:#fff; border-radius:16px; max-width:460px; width:100%;
+  box-shadow:0 20px 60px rgba(0,0,0,.3); overflow:hidden;
+  animation: popIn .2s ease;
+}
+@keyframes popIn {
+  from { transform:scale(.92); opacity:0 }
+  to   { transform:scale(1);   opacity:1 }
+}
+.modal-head {
+  background:var(--ink); color:#fff; padding:1.2rem 1.5rem;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.modal-head h3 {
+  font-family:'Playfair Display',serif; font-size:1.15rem;
+  font-weight:700; margin:0;
+}
+.modal-close {
+  background:none; border:none; color:#aaa; font-size:1.3rem;
+  cursor:pointer; padding:.1rem .4rem; border-radius:4px;
+  transition:color .15s;
+}
+.modal-close:hover { color:#fff }
+.modal-body { padding:1.4rem 1.6rem }
+.modal-note {
+  background:var(--gold-pale); border:1.5px solid var(--gold);
+  border-radius:8px; padding:.8rem 1.1rem; font-size:.86rem;
+  margin-bottom:1.2rem; line-height:1.6;
+}
+.modal-note strong { color:var(--gold) }
+.modal-steps { list-style:none; padding:0 }
+.modal-steps li {
+  display:flex; gap:.9rem; align-items:flex-start;
+  padding:.65rem 0; border-bottom:1px solid var(--cream-dark);
+  font-size:.9rem; line-height:1.6;
+}
+.modal-steps li:last-child { border-bottom:none }
+.step-circle {
+  width:26px; height:26px; border-radius:50%; background:var(--ink);
+  color:#fff; font-family:'Source Code Pro',monospace; font-size:.78rem;
+  font-weight:700; display:flex; align-items:center; justify-content:center;
+  flex-shrink:0; margin-top:.1rem;
+}
+.modal-steps code {
+  font-family:'Source Code Pro',monospace; font-size:.82rem;
+  background:var(--cream-dark); padding:.1rem .35rem; border-radius:3px;
+}
+.modal-footer {
+  padding:.9rem 1.6rem 1.2rem; background:var(--cream);
+  font-size:.82rem; color:var(--ink-muted); font-style:italic;
+  border-top:1px solid var(--cream-dark);
+}
+
+/* Nav-hjälpknapp */
+.nav-help-btn {
+  margin-left:auto; flex-shrink:0;
+  display:inline-flex; align-items:center; gap:.3rem;
+  padding:.5rem .9rem; background:var(--gold); color:var(--ink);
+  border:none; border-radius:20px; font-family:'Source Code Pro',monospace;
+  font-size:.75rem; font-weight:700; cursor:pointer;
+  transition:background .15s; white-space:nowrap;
+}
+.nav-help-btn:hover { background:var(--gold-light) }
+
+/* Ljud-felmeddelande */
+.audio-err {
+  display:none; font-size:.78rem; color:#c05000;
+  font-family:'Source Code Pro',monospace; margin-top:.35rem;
+  padding:.3rem .6rem; background:#fff3e6; border-radius:5px;
+  border-left:3px solid #c05000;
+}
+.audio-err.ae-show { display:block }
+
+/* Startside-info om ljud */
+.audio-info-box {
+  margin-top:1.4rem; background:var(--ink);
+  border-radius:10px; padding:1.1rem 1.4rem;
+  display:flex; gap:1rem; align-items:flex-start;
+}
+.audio-info-box .aib-icon {
+  font-size:1.6rem; flex-shrink:0; margin-top:.1rem;
+}
+.audio-info-box .aib-text { color:#ccc; font-size:.86rem; line-height:1.7 }
+.audio-info-box .aib-text strong { color:var(--gold-light) }
+.audio-info-box .aib-btn {
+  display:inline-block; margin-top:.55rem; padding:.4rem .9rem;
+  background:var(--gold); color:var(--ink); border:none; border-radius:16px;
+  font-family:'Source Code Pro',monospace; font-size:.76rem; font-weight:700;
+  cursor:pointer; transition:background .15s;
+}
+.audio-info-box .aib-btn:hover { background:var(--gold-light) }
+
+@media print{
+  #topnav{display:none}
+  .module{box-shadow:none;border:1px solid #ccc;page-break-after:always}
+  .module-header{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  details.fm[open] .fb{display:block}
+  body{font-size:13px}
+}
+@media(max-width:600px){
+  .module-body{padding:1.2rem 1.2rem}
+  .module-header{padding:1.3rem 1.2rem 1rem}
+  .np-topics{grid-template-columns:1fr}
+  .audio-wrap{flex-direction:column;align-items:flex-start}
+  audio{width:100%}
+}
+</style>
+</head>
+<body>
+
+<nav id="topnav">
+  <span class="nav-logo">Spanska 4</span>
+  <button class="nav-btn-tab active" data-tab="welcome" onclick="showTab('welcome')">🏠 Start</button>
+  <button class="nav-btn-tab" data-tab="m1" onclick="showTab('m1')"><span class="ndot" style="background:var(--m1)"></span>M1 Empezamos</button>
+  <button class="nav-btn-tab" data-tab="m2" onclick="showTab('m2')"><span class="ndot" style="background:var(--m2)"></span>M2 Pastelera</button>
+  <button class="nav-btn-tab" data-tab="m3" onclick="showTab('m3')"><span class="ndot" style="background:var(--m3)"></span>M3 Sol y playa</button>
+  <button class="nav-btn-tab" data-tab="m4" onclick="showTab('m4')"><span class="ndot" style="background:var(--m4)"></span>M4 Uruguay</button>
+  <button class="nav-btn-tab" data-tab="m5" onclick="showTab('m5')"><span class="ndot" style="background:var(--m5)"></span>M5 Los Andes</button>
+  <button class="nav-btn-tab" data-tab="facit" onclick="showTab('facit')"><span style="color:var(--gold-light)">✓</span> Facit</button>
+  <button class="nav-help-btn" onclick="openAudioModal()">🔊 Hur fungerar ljudet?</button>
+</nav>
+
+<div class="page">
+
+<!-- ═══ STARTSIDA ═══ -->
+<div id="tab-welcome" class="tab-panel active">
+<header class="hero">
+  <div class="hero-tag">Gymnasienivå · Spanska 4 · Provförberedelse</div>
+  <h1>Häfte <em>Spanska 4</em></h1>
+  <p class="hero-sub">5 moduler · Separat hör- och läsförståelse · Grammatik · NP-format i M1, M4, M5</p>
+  <div class="hero-box">
+    <strong>Flöde per modul:</strong> 🎧 Hörförståelse (lyssna utan text) → svara på frågorna → 📖 Läsförståelse (läs ny text) → grammatikövningar → ✍️ Kulturell skrivuppgift
+  </div>
+</header>
+<div class="start-cards">
+  <div class="start-card" data-tab="m1" onclick="showTab('m1')">
+    <div class="sc-tag">Modul 1</div>
+    <h3>¡Empezamos!</h3>
+    <p>Presens · Perfekt · Preteritum · Gustar · Komparation</p>
+  </div>
+  <div class="start-card" data-tab="m2" onclick="showTab('m2')">
+    <div class="sc-tag">Modul 2</div>
+    <h3>La pastelera canaria</h3>
+    <p>Oregelb. preteritum · Imperativ · A personal · Bindeord</p>
+  </div>
+  <div class="start-card" data-tab="m3" onclick="showTab('m3')">
+    <div class="sc-tag">Modul 3</div>
+    <h3>Mucho más que sol y playa</h3>
+    <p>Imperfekt · Pret. vs. imperfekt · Demonstrativa</p>
+  </div>
+  <div class="start-card" data-tab="m4" onclick="showTab('m4')">
+    <div class="sc-tag">Modul 4</div>
+    <h3>Una joven uruguaya sueña…</h3>
+    <p>Konjunktiv · Önskan · Decir que · Ser/estar</p>
+  </div>
+  <div class="start-card" data-tab="m5" onclick="showTab('m5')">
+    <div class="sc-tag">Modul 5</div>
+    <h3>El milagro en los Andes</h3>
+    <p>Opersonlig konj. · Oregelb. konj. · Verb m. prep · Negation</p>
+  </div>
+  <div class="start-card" data-tab="facit" onclick="showTab('facit')">
+    <div class="sc-tag">Facit</div>
+    <h3>✓ Svar och lösningar</h3>
+    <p>Klicka för att se facit per modul</p>
+  </div>
+
+<div class="audio-info-box">
+  <div class="aib-icon">🔊</div>
+  <div class="aib-text">
+    <strong>Hur fungerar hörövningarna?</strong><br>
+    Ljudet fungerar när HTML-filen och mappen <code style="background:rgba(255,255,255,.15);padding:.1rem .3rem;border-radius:3px;font-family:monospace;font-size:.82rem"></code>
+    ligger i samma mapp på din dator. Ladda ned zip-filen från din lärare, packa upp den och öppna HTML-filen direkt.<br>
+    <button class="aib-btn" onclick="openAudioModal()">Läs mer →</button>
+  </div>
+</div>
+
+</div>
+</div><!-- /tab-welcome -->
+
+<!-- ═══════════════════════════ MODUL 1 ═══════════════════════════ -->
+<div id="tab-m1" class="tab-panel">
+<section id="m1" class="module m1">
+<div class="module-header" data-num="I">
+  <div class="mtag">Modul 1 · ¡Empezamos!</div>
+  <h2>Introduktion och repetition</h2>
+  <div class="msub">Presens · Perfekt · Preteritum · Gustar · Objektpronomen · Komparation</div>
+</div>
+<div class="module-body">
+
+<table class="ctable">
+  <thead><tr><th>Kommunikation</th><th>Språkliga moment</th><th>Kultur</th></tr></thead>
+  <tbody>
+    <tr><td>Småprata</td><td>Presens, perfekt, regelbundet preteritum</td><td>¿Qué sabes del mundo hispánico?</td></tr>
+    <tr><td>Förstå och ge personlig information</td><td>Direkt och indirekt objekt</td><td></td></tr>
+    <tr><td>Förstå vardaglig dialog</td><td>Adjektivets komparation</td><td></td></tr>
+    <tr><td></td><td>Gustar, encantar, aburrir, doler</td><td></td></tr>
+  </tbody>
+</table>
+
+<!-- ── HÖRFÖRSTÅELSE M1 ── -->
+<div class="sec-banner banner-hor"><span class="sec-icon">🎧</span><span class="sec-title">Hörförståelse</span><span class="sec-type">Lyssna UTAN att läsa texten</span></div>
+
+<div class="audio-wrap">
+  <div class="audio-ball">🎧</div>
+  <div class="audio-info"><div class="audio-name">Paula y Andrés — presentación y vida cotidiana</div><div class="audio-file">m1_dialog.mp3</div></div>
+  <audio controls preload="none"><source src="m1_dialog.mp3" type="mpeg"></audio>
+</div>
+<div class="step-guide">
+  <div class="step-item"><span class="step-num">1</span><span>Lyssna och notera: Vad gör Paula och Andrés för att träna spanskan?</span></div>
+  <div class="step-item"><span class="step-num">2</span><span>Svara på frågorna nedan <em>enbart</em> utifrån det du hört.</span></div>
+  <div class="step-item"><span class="step-num">3</span><span>Jämför dina svar med en klasskamrat.</span></div>
+</div>
+
+<div class="q-hdr">🧠 Preguntas — Hörförståelse</div>
+
+<div class="qcard"><span class="qtag">H1</span><span class="qtype">Opción múltiple</span>
+<div class="qtext">¿Dónde han quedado Paula y Andrés para practicar español el jueves?</div>
+<div class="mc-opts" data-answer="c" data-section="hor">
+<div class="mc-opt" data-v="a" onclick="selectMC(this)">En casa de Paula</div>
+<div class="mc-opt" data-v="b" onclick="selectMC(this)">En el patio del instituto</div>
+<div class="mc-opt" data-v="c" onclick="selectMC(this)">En la biblioteca</div>
+<div class="mc-opt" data-v="d" onclick="selectMC(this)">En una cafetería</div>
+</div></div>
+<div class="mc-opts" data-answer="b" data-section="hor">
+<div class="mc-opt" data-v="a" onclick="selectMC(this)">De España</div>
+<div class="mc-opt" data-v="b" onclick="selectMC(this)">De México</div>
+<div class="mc-opt" data-v="c" onclick="selectMC(this)">De Argentina</div>
+<div class="mc-opt" data-v="d" onclick="selectMC(this)">De Colombia</div>
+</div></div>
+
+<div class="qcard"><span class="qtag">H2</span><span class="qtype">Verdadero o Falso</span>
+<table class="vf-tbl"><thead><tr><th>Afirmación</th><th>Svar</th></tr></thead>
+<tbody>
+  <tr data-answer="F" data-section="hor"><td>a) Paula entrena baloncesto tres veces por semana ahora.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+  <tr data-answer="V" data-section="hor"><td>b) A Andrés le resultan difíciles las matemáticas y las ciencias.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+  <tr data-answer="F" data-section="hor"><td>c) Paula dice que practicar un poco cada día ayuda poco.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+</tbody></table></div>
+
+<div class="qcard"><span class="qtag">H3</span><span class="qtype">Respuesta abierta</span>
+<div class="qtext">¿Qué hace Andrés para practicar español fuera del instituto? Menciona al menos dos ejemplos.</div>
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+
+<div class="qcard"><span class="qtag">H4</span><span class="qtype">Gramática auditiva — Gustar/encantar</span>
+<div class="qtext">Paula y Andrés usan varias construcciones con <em>gustar / encantar / aburrir</em>. Escribe dos frases que recuerdes del audio.</div>
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+<ol class="ex-list" style="margin-top:.5rem">
+  <li><span class="n">1.</span><input type="text" class="fl-input" style="width:300px"></li>
+  <li><span class="n">2.</span><input type="text" class="fl-input" style="width:300px"></li>
+</ol></div>
+
+<div class="qcard"><span class="qtag">H5</span><span class="qtype">Reflexión personal</span>
+<div class="qtext">Paula y Andrés dicen que este curso es bastante más difícil que el anterior. ¿Cómo es tu situación? ¿Qué asignatura te resulta más difícil y qué haces para mejorar? Escribe 3–4 meningar.</div>
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+
+<!-- ── NP-FORMAT M1 ── -->
+<hr class="sdiv">
+
+<div class="ratta-wrap">
+  <button class="ratta-btn" onclick="ratta('m1','hor')">✓ Rätta mina svar</button>
+  <p class="ratta-note">Räknar H1 (MC) och H2 (V/F)</p>
+  <div class="ratta-result" id="rr-m1-hor"></div>
+</div>
+<div class="sec-banner banner-np"><span class="sec-icon">📋</span><span class="sec-title">NP-format — 8 korta klipp</span><span class="sec-type">Extrafärdig hörövning</span></div>
+
+<div class="np-box">
+  <div class="np-inst-title">Instrucciones</div>
+  <div class="np-inst-text">Du ska lyssna på <strong>8 korta samtal</strong> (Klipp 1–8). Varje samtal handlar om ett visst ämne. Din uppgift är att para ihop varje klipp med rätt ämne från listan nedan. Det finns fler ämnen än klipp — alla ämnen används inte. Skriv bara ämnets <strong>bokstav</strong> i svarsfältet.</div>
+  <div class="np-topics">
+    <div class="np-topic"><span class="tl">A.</span><span>Las tradiciones culturales</span></div>
+    <div class="np-topic"><span class="tl">B.</span><span>La comida y la cocina</span></div>
+    <div class="np-topic"><span class="tl">C.</span><span>Los estudios y el instituto</span></div>
+    <div class="np-topic"><span class="tl">D.</span><span>El tiempo libre y los pasatiempos</span></div>
+    <div class="np-topic"><span class="tl">E.</span><span>La familia y los amigos</span></div>
+    <div class="np-topic"><span class="tl">F.</span><span>El trabajo y las profesiones</span></div>
+    <div class="np-topic"><span class="tl">G.</span><span>Los viajes y el turismo</span></div>
+    <div class="np-topic"><span class="tl">H.</span><span>La música y el arte</span></div>
+    <div class="np-topic"><span class="tl">I.</span><span>El deporte</span></div>
+    <div class="np-topic"><span class="tl">J.</span><span>La tecnología y las redes sociales</span></div>
+    <div class="np-topic"><span class="tl">K.</span><span>La naturaleza y el medio ambiente</span></div>
+    <div class="np-topic"><span class="tl">L.</span><span>La salud y el bienestar</span></div>
+  </div>
+  <div class="np-clips">
+    <div class="np-clip"><div class="np-clip-num">KLIPP 1 · m1_np_01.mp3</div><audio controls preload="none"><source src="m1_np_01.mp3" type="mpeg"></audio></div>
+    <div class="np-clip"><div class="np-clip-num">KLIPP 2 · m1_np_02.mp3</div><audio controls preload="none"><source src="m1_np_02.mp3" type="mpeg"></audio></div>
+    <div class="np-clip"><div class="np-clip-num">KLIPP 3 · m1_np_03.mp3</div><audio controls preload="none"><source src="m1_np_03.mp3" type="mpeg"></audio></div>
+    <div class="np-clip"><div class="np-clip-num">KLIPP 4 · m1_np_04.mp3</div><audio controls preload="none"><source src="m1_np_04.mp3" type="mpeg"></audio></div>
+    <div class="np-clip"><div class="np-clip-num">KLIPP 5 · m1_np_05.mp3</div><audio controls preload="none"><source src="m1_np_05.mp3" type="mpeg"></audio></div>
+    <div class="np-clip"><div class="np-clip-num">KLIPP 6 · m1_np_06.mp3</div><audio controls preload="none"><source src="m1_np_06.mp3" type="mpeg"></audio></div>
+    <div class="np-clip"><div class="np-clip-num">KLIPP 7 · m1_np_07.mp3</div><audio controls preload="none"><source src="m1_np_07.mp3" type="mpeg"></audio></div>
+    <div class="np-clip"><div class="np-clip-num">KLIPP 8 · m1_np_08.mp3</div><audio controls preload="none"><source src="m1_np_08.mp3" type="mpeg"></audio></div>
+  </div>
+  <div class="np-sel-row" data-mod="m1"><div class="np-cell"><label>Klipp 1</label><select class="np-sel" id="nps-m1-1"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option></select></div><div class="np-cell"><label>Klipp 2</label><select class="np-sel" id="nps-m1-2"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option></select></div><div class="np-cell"><label>Klipp 3</label><select class="np-sel" id="nps-m1-3"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option></select></div><div class="np-cell"><label>Klipp 4</label><select class="np-sel" id="nps-m1-4"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option></select></div><div class="np-cell"><label>Klipp 5</label><select class="np-sel" id="nps-m1-5"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option></select></div><div class="np-cell"><label>Klipp 6</label><select class="np-sel" id="nps-m1-6"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option></select></div><div class="np-cell"><label>Klipp 7</label><select class="np-sel" id="nps-m1-7"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option></select></div><div class="np-cell"><label>Klipp 8</label><select class="np-sel" id="nps-m1-8"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option></select></div></div>
+</div>
+
+<!-- ── LÄSFÖRSTÅELSE M1 ── -->
+<hr class="sdiv">
+
+<div class="ratta-wrap">
+  <button class="ratta-btn" onclick="ratta('m1','np')">✓ Rätta mina svar</button>
+  <p class="ratta-note">Räknar NP-matchningen (8 klipp)</p>
+  <div class="ratta-result" id="rr-m1-np"></div>
+</div>
+<div class="sec-banner banner-las"><span class="sec-icon">📖</span><span class="sec-title">Läsförståelse</span><span class="sec-type">Ny text — annan situation, samma tema</span></div>
+<div class="step-guide step-las">
+  <div class="step-item"><span class="step-num" style="background:var(--las)">1</span><span>Läs texten lugnt och noggrant.</span></div>
+  <div class="step-item"><span class="step-num" style="background:var(--las)">2</span><span>Svara på frågorna. Grammatikfrågorna kräver att du hittar belägg i texten.</span></div>
+</div>
+
+<div class="text-box">
+  <p><strong>Un sueco en Madrid — el blog de Diego</strong></p>
+  <p>Hola a todos. Hoy es mi primer mes en Uppsala, Suecia, y quiero contaros cómo va todo.</p>
+  <p>Al principio, <strong>eché de menos</strong> Madrid muchísimo. La ciudad <strong>era</strong> más tranquila de lo que <strong>imaginaba</strong>, <strong>hacía</strong> más frío y la gente no <strong>hablaba</strong> tanto en los sitios públicos. En el metro de Madrid todo el mundo charla, se ríe, hace ruido. Aquí todos van con auriculares y leen libros. Al principio <strong>me pareció</strong> raro, pero ahora lo entiendo — es simplemente otra forma de ser.</p>
+  <p>Lo que más me <strong>gusta</strong> de Suecia es la naturaleza. <strong>Hay</strong> lagos, bosques… Es mucho más verde que Madrid. Los fines de semana, mis compañeros de clase me <strong>han llevado</strong> a pasear por el campo. Me <strong>ha encantado</strong>.</p>
+  <p>La comida <strong>es</strong> diferente, claro. No me <strong>gustan</strong> mucho los pepinos encurtidos ni el pan de centeno, pero el salmón <strong>está</strong> riquísimo. <strong>Echo de menos</strong> la paella y las tapas, pero <strong>he aprendido</strong> a cocinar tortilla española para mis amigos suecos — ¡les <strong>ha gustado</strong> mucho!</p>
+  <p>El sueco me <strong>parece</strong> el idioma más difícil del mundo. Pero mis compañeros me <strong>ayudan</strong> mucho. Ivar, mi mejor amigo aquí, <strong>habla</strong> español bastante bien porque <strong>ha estudiado</strong> tres años. Me <strong>ha enseñado</strong> muchas palabras en sueco.</p>
+  <p>En resumen: Suecia <strong>es</strong> diferente, pero es una diferencia que me <strong>está enseñando</strong> mucho. ¡Hasta pronto!</p>
+</div>
+
+<div class="q-hdr">🧠 Preguntas — Läsförståelse</div>
+
+<div class="qcard"><span class="qtag">L1</span><span class="qtype">Opción múltiple</span>
+<div class="qtext">¿Por qué le pareció rara Suecia a Diego al principio?
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+<div class="mc-opts" data-answer="b" data-section="las">
+<div class="mc-opt" data-v="a" onclick="selectMC(this)">Porque la comida era muy diferente.</div>
+<div class="mc-opt" data-v="b" onclick="selectMC(this)">Porque la gente era menos comunicativa en público que en España.</div>
+<div class="mc-opt" data-v="c" onclick="selectMC(this)">Porque no entendía el idioma.</div>
+<div class="mc-opt" data-v="d" onclick="selectMC(this)">Porque el tiempo era muy malo.</div>
+</div></div>
+
+<div class="qcard"><span class="qtag">L2</span><span class="qtype">Verdadero o Falso</span>
+<table class="vf-tbl"><thead><tr><th>Afirmación</th><th>Svar</th></tr></thead>
+<tbody>
+  <tr data-answer="F" data-section="las"><td>a) Diego dice que Suecia es menos verde que Madrid.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+  <tr data-answer="F" data-section="las"><td>b) A Diego no le gusta nada la comida sueca.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+  <tr data-answer="V" data-section="las"><td>c) Los amigos suecos de Diego han probado la tortilla española.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+</tbody></table></div>
+
+<div class="qcard"><span class="qtag">L3</span><span class="qtype">Gramática — Gustar/encantar</span>
+<div class="qtext">Busca en el texto <strong>cuatro construcciones</strong> con gustar, encantar, parecer o doler. Escríbelas y explica la concordancia (¿por qué singular o plural?).
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+<table class="gtbl" style="margin-top:.7rem">
+  <thead><tr><th>Construcción en el texto</th><th>Singular / Plural</th><th>¿Por qué?</th></tr></thead>
+  <tbody><tr><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+  <tr><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+  <tr><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+  <tr><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr></tbody>
+</table></div>
+
+<div class="qcard"><span class="qtag">L4</span><span class="qtype">Gramática — Komparation</span>
+<div class="qtext">Diego gör flera jämförelser. Hitta <strong>tre</strong> och skriv dem här. Identifiera vilken typ: <em>más…que / menos…que / tan…como / superlativ</em>.
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+<ol class="ex-list" style="margin-top:.5rem">
+  <li><span class="n">1.</span><input type="text" class="fl-input" style="width:260px"> — Typ: <input type="text" class="fl-input" style="width:100px"></li>
+  <li><span class="n">2.</span><input type="text" class="fl-input" style="width:260px"> — Typ: <input type="text" class="fl-input" style="width:100px"></li>
+  <li><span class="n">3.</span><input type="text" class="fl-input" style="width:260px"> — Typ: <input type="text" class="fl-input" style="width:100px"></li>
+</ol></div>
+
+<div class="qcard"><span class="qtag">L5</span><span class="qtype">Gramática — Objektpronomen</span>
+<div class="qtext">Ersätt det kursiverade med rätt objektpronomen och skriv om meningen.<br>
+<strong>Ej:</strong> Diego ha enseñado <em>muchas palabras</em> a <em>Ivar</em> → Diego <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> ha enseñado <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u>.<br>
+Gör samma sak med:
+
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+<ol class="ex-list" style="margin-top:.5rem">
+  <li><span class="n">1.</span>Ivar ha enseñado <em>muchas palabras suecas</em> a <em>Diego</em>. → <input type="text" class="fl-input" style="width:300px"></li>
+  <li><span class="n">2.</span>Diego cocina <em>la tortilla</em> para <em>sus amigos</em>. → <input type="text" class="fl-input" style="width:300px"></li>
+</ol></div>
+
+<!-- ── GRAMMATIK M1 ── -->
+<hr class="sdiv">
+
+<div class="ratta-wrap">
+  <button class="ratta-btn" onclick="ratta('m1','las')">✓ Rätta mina svar</button>
+  <p class="ratta-note">Räknar L1 (MC) och L2 (V/F)</p>
+  <div class="ratta-result" id="rr-m1-las"></div>
+</div>
+<div class="sec-banner banner-gram"><span class="sec-icon">✏️</span><span class="sec-title">Grammatisk tillämpning</span></div>
+
+<div class="ex-h">Övning 1.1 <small>Gustar / encantar / aburrir / doler — Lucktext</small></div>
+<div class="ex-block">
+  <div class="ex-inst">Fyll i rätt verb i rätt form. Tänk på att subjektet — inte personen — styr om det ska vara singular eller plural.<button class="show-btn" onclick="toggleAns('ans-m1-0')">👁 Visa svar</button>
+<div class="ans-panel" id="ans-m1-0"><ul class="fa"><li><span class="fan">1</span><span class="fac">gusta</span></li><li><span class="fan">2</span><span class="fac">aburren</span></li><li><span class="fan">3</span><span class="fac">duele</span></li><li><span class="fan">4</span><span class="fac">encantan</span></li><li><span class="fan">5</span><span class="fac">aburre</span></li><li><span class="fan">6</span><span class="fac">interesa</span></li><li><span class="fan">7</span><span class="fac">molesta</span></li><li><span class="fan">8</span><span class="fac">interesa / gusta</span></li></ul></div>
+</div>
+  <div class="ex-wb">Verb: gustar · encantar · aburrir · doler · molestar · interesar</div>
+  <ol class="ex-list">
+    <li><span class="n">1.</span>A mí me <input type="text" class="fl-input"> mucho la música latina. <em>(sing.)</em></li>
+    <li><span class="n">2.</span>A ella le <input type="text" class="fl-input"> los exámenes de gramática. <em>(plur.)</em></li>
+    <li><span class="n">3.</span>¿A ti te <input type="text" class="fl-input"> la cabeza cuando estudias demasiado?</li>
+    <li><span class="n">4.</span>A nosotros nos <input type="text" class="fl-input"> las películas de acción.</li>
+    <li><span class="n">5.</span>A vosotros os <input type="text" class="fl-input"> esperar mucho tiempo.</li>
+    <li><span class="n">6.</span>A los estudiantes les <input type="text" class="fl-input"> aprender sobre otras culturas.</li>
+    <li><span class="n">7.</span>A mi hermana le <input type="text" class="fl-input"> el ruido — siempre se queja.</li>
+    <li><span class="n">8.</span>¿A usted le <input type="text" class="fl-input"> el arte moderno?</li>
+  </ol>
+</div>
+
+<div class="ex-h">Övning 1.2 <small>Direkt och indirekt objekt — Pronomenersättning</small></div>
+<div class="ex-block">
+  <div class="ex-inst">Ersätt det understrukna med rätt pronomen. <strong>Mönster:</strong> María compra <u>el pan</u> → María <em>lo</em> compra.<button class="show-btn" onclick="toggleAns('ans-m1-1')">👁 Visa svar</button>
+<div class="ans-panel" id="ans-m1-1"><ul class="fa"><li><span class="fan">1</span><span class="fac">se la  <em>(les→se framför la/lo/las)</em></span></li><li><span class="fan">2</span><span class="fac">me los</span></li><li><span class="fan">3</span><span class="fac">La</span></li><li><span class="fan">4</span><span class="fac">dárselas</span></li><li><span class="fan">5</span><span class="fac">nos lo</span></li></ul></div>
+</div>
+  <ol class="ex-list">
+    <li><span class="n">1.</span>El profesor explica <u>la gramática</u> a <u>los estudiantes</u>. → El profesor <input type="text" class="fl-input" style="width:60px"> explica <input type="text" class="fl-input" style="width:60px">.</li>
+    <li><span class="n">2.</span>Mi madre manda <u>mensajes</u> a <u>mí</u> todos los días. → Mi madre <input type="text" class="fl-input" style="width:60px"> manda <input type="text" class="fl-input" style="width:60px">.</li>
+    <li><span class="n">3.</span>¿Has visto <u>la película</u> ya? → ¿<input type="text" class="fl-input" style="width:60px"> has visto ya?</li>
+    <li><span class="n">4.</span>Voy a dar <u>las flores</u> a <u>mi abuela</u>. → Voy a dár<input type="text" class="fl-input" style="width:80px">.</li>
+    <li><span class="n">5.</span>Los profesores enseñan <u>español</u> a <u>nosotros</u>. → Los profesores <input type="text" class="fl-input" style="width:60px"> enseñan <input type="text" class="fl-input" style="width:60px">.</li>
+  </ol>
+</div>
+
+<div class="ex-h">Övning 1.3 <small>Adjektivkomparation — Meningsbyggnad</small></div>
+<div class="ex-block">
+  <div class="ex-inst">Skriv fullständiga meningar. Använd <em>más…que / menos…que / tan…como</em> eller superlativ.<button class="show-btn" onclick="toggleAns('ans-m1-2')">👁 Visa svar</button>
+<div class="ans-panel" id="ans-m1-2"><ul class="fa"><li><span class="fan">1</span><span class="fac">El español es más difícil que el sueco.</span></li><li><span class="fan">2</span><span class="fac">Madrid es más grande que Estocolmo.</span></li><li><span class="fan">3</span><span class="fac">Este ejercicio es tan fácil como el anterior.</span></li><li><span class="fan">4</span><span class="fac">La gramática es menos interesante que el vocabulario.</span></li><li><span class="fan">5</span><span class="fac">Este libro es el mejor de la clase.</span></li></ul></div>
+</div>
+  <ol class="ex-list">
+    <li><span class="n">1.</span>el español / difícil / el sueco (+) → <input type="text" class="fl-input" style="width:280px"></li>
+    <li><span class="n">2.</span>Madrid / grande / Estocolmo (+) → <input type="text" class="fl-input" style="width:280px"></li>
+    <li><span class="n">3.</span>este ejercicio / fácil / el anterior (=) → <input type="text" class="fl-input" style="width:270px"></li>
+    <li><span class="n">4.</span>la gramática / interesante / el vocabulario (−) → <input type="text" class="fl-input" style="width:260px"></li>
+    <li><span class="n">5.</span>este libro / bueno / todos los libros de la clase (sup.) → <input type="text" class="fl-input" style="width:250px"></li>
+  </ol>
+</div>
+
+<!-- ── KULTUR M1 ── -->
+<hr class="sdiv">
+<div class="sec-banner banner-kult"><span class="sec-icon">🌍</span><span class="sec-title">Kulturell reflektion</span></div>
+<div class="kult-box">
+  <div class="kult-title">Skrivuppgift 1: ¿Qué sabes del mundo hispánico?</div>
+  <div class="kult-prompt">Escribe un texto de <strong>8–12 meningar</strong> donde respondas:</div>
+  <ul>
+    <li>¿Qué países hispanohablantes conoces? Menciona al menos tres.</li>
+    <li>¿Qué sabes de la cultura, la música o la comida de esos países?</li>
+    <li>¿Qué diferencias y similitudes crees que hay entre Suecia y los países hispanohablantes?</li>
+  </ul>
+  <div class="kult-note">Använd presens, perfekt och preteritum korrekt. Inkludera minst två jämförelser och en gustar-konstruktion.</div>
+</div>
+
+</div></section>
+
+</div><!-- /tab-m1 -->
+<!-- ═══════════════════════════ MODUL 2 ═══════════════════════════ -->
+<div id="tab-m2" class="tab-panel">
+<section id="m2" class="module m2">
+<div class="module-header" data-num="II">
+  <div class="mtag">Modul 2 · 1a La pastelera canaria</div>
+  <h2>Las Palmas — handel, mat och traditioner</h2>
+  <div class="msub">Oregelbundet preteritum · Imperativ · A personal · Bindeord · Köket</div>
+</div>
+<div class="module-body">
+
+<table class="ctable">
+  <thead><tr><th>Kommunikation</th><th>Språkliga moment</th><th>Kultur</th></tr></thead>
+  <tbody>
+    <tr><td>Förstå dialog, berättande text, instruktion</td><td>Oregelbundet preteritum</td><td>Spanska matvanor</td></tr>
+    <tr><td>Handla över disk · Laga mat och baka</td><td>Imperativ (tú)</td><td>Kanarieöarna</td></tr>
+    <tr><td>Uttrycka sig i dåtid</td><td>Direkt objekt med <em>a</em></td><td></td></tr>
+    <tr><td>TF: Presentera ett recept</td><td><em>Así se dice:</em> Bindeord I · Vocabulario: I köket</td><td></td></tr>
+  </tbody>
+</table>
+
+<!-- ── HÖRFÖRSTÅELSE M2 ── -->
+<div class="sec-banner banner-hor"><span class="sec-icon">🎧</span><span class="sec-title">Hörförståelse</span><span class="sec-type">Lyssna UTAN att läsa texten</span></div>
+
+<div class="audio-wrap">
+  <div class="audio-ball">🎧</div>
+  <div class="audio-info"><div class="audio-name">La historia de Silvia y la pastelería canaria</div><div class="audio-file">m2_dialog.mp3</div></div>
+  <audio controls preload="none"><source src="m2_dialog.mp3" type="mpeg"></audio>
+</div>
+<div class="step-guide">
+  <div class="step-item"><span class="step-num">1</span><span>Lyssna och notera: Hur beskrivs Silvias resa från observatör till medarbetare?</span></div>
+  <div class="step-item"><span class="step-num">2</span><span>Svara på H1–H5 utan att se texten.</span></div>
+</div>
+
+<div class="q-hdr">🧠 Preguntas — Hörförståelse</div>
+
+<div class="qcard"><span class="qtag">H1</span><span class="qtype">Opción múltiple</span>
+<div class="qtext">¿Cuántos años tenía Silvia cuando empezó a trabajar en la pastelería?</div>
+<div class="mc-opts" data-answer="c" data-section="hor">
+<div class="mc-opt" data-v="a" onclick="selectMC(this)">Quince</div>
+<div class="mc-opt" data-v="b" onclick="selectMC(this)">Dieciséis</div>
+<div class="mc-opt" data-v="c" onclick="selectMC(this)">Diecisiete</div>
+<div class="mc-opt" data-v="d" onclick="selectMC(this)">Dieciocho</div>
+</div></div>
+<div class="mc-opts" data-answer="b" data-section="hor">
+<div class="mc-opt" data-v="a" onclick="selectMC(this)">Un concurso de cocina en televisión</div>
+<div class="mc-opt" data-v="b" onclick="selectMC(this)">Una entrevista en la radio</div>
+<div class="mc-opt" data-v="c" onclick="selectMC(this)">Un podcast sobre turismo</div>
+<div class="mc-opt" data-v="d" onclick="selectMC(this)">Una clase de cocina en directo</div>
+</div></div>
+
+<div class="qcard"><span class="qtag">H2</span><span class="qtype">Verdadero o Falso</span>
+<table class="vf-tbl"><thead><tr><th>Afirmación</th><th>Svar</th></tr></thead>
+<tbody>
+  <tr data-answer="F" data-section="hor"><td>a) Al principio, Silvia empezó a atender a los clientes desde el primer día.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+  <tr data-answer="V" data-section="hor"><td>b) Algunos clientes compraban por curiosidad, no solo por hambre.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+  <tr data-answer="F" data-section="hor"><td>c) Al final, lo que más valoraba Silvia era el sueldo.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+</tbody></table></div>
+
+<div class="qcard"><span class="qtag">H3</span><span class="qtype">Respuesta abierta</span>
+<div class="qtext">¿Qué descubrió Silvia sobre la relación entre la gastronomía y la cultura?</div>
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+
+<div class="qcard"><span class="qtag">H4</span><span class="qtype">Gramática auditiva — Imperativo / verbos de acción</span>
+<div class="qtext">Silvia describe las tareas en la pastelería: saludar, recomendar, explicar… Escribe <strong>tres verbos de acción</strong> relacionados con la atención al cliente que recuerdes del audio.</div>
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+<ol class="ex-list" style="margin-top:.5rem">
+  <li><span class="n">1.</span><input type="text" class="fl-input"></li>
+  <li><span class="n">2.</span><input type="text" class="fl-input"></li>
+  <li><span class="n">3.</span><input type="text" class="fl-input"></li>
+</ol></div>
+
+<div class="qcard"><span class="qtag">H5</span><span class="qtype">Reflexión personal</span>
+<div class="qtext">Silvia aprende que trabajar en la pastelería no consistía solo en vender, sino también en comunicar y crear un ambiente agradable. ¿Estás de acuerdo con que el trabajo siempre enseña algo más que la tarea en sí? Escribe 3–4 meningar.</div>
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+
+<!-- ── LÄSFÖRSTÅELSE M2 ── -->
+<hr class="sdiv">
+
+<div class="ratta-wrap">
+  <button class="ratta-btn" onclick="ratta('m2','hor')">✓ Rätta mina svar</button>
+  <p class="ratta-note">Räknar H1 (MC) och H2 (V/F)</p>
+  <div class="ratta-result" id="rr-m2-hor"></div>
+</div>
+<div class="sec-banner banner-las"><span class="sec-icon">📖</span><span class="sec-title">Läsförståelse</span><span class="sec-type">Ny text — turisten Nina på Las Palmas-marknaden</span></div>
+<div class="step-guide step-las">
+  <div class="step-item"><span class="step-num" style="background:var(--las)">1</span><span>Läs texten. Observera preteritumformer och bindeord.</span></div>
+  <div class="step-item"><span class="step-num" style="background:var(--las)">2</span><span>Svara på L1–L5.</span></div>
+</div>
+
+<div class="text-box">
+  <p><strong>Un martes en el mercado</strong></p>
+  <p>El martes pasado <strong>fui</strong> al Mercado Central de Las Palmas por primera vez y <strong>fue</strong> una experiencia que no <strong>esperaba</strong>. <strong>Llegué</strong> temprano por la mañana, cuando los puestos todavía abrían. El mercado <strong>olía</strong> a especias, a fruta fresca y a café recién hecho.</p>
+  <p><strong>Había</strong> verduras que nunca <strong>había visto</strong> en Suecia. Todo <strong>tenía</strong> colores brillantes y los vendedores <strong>llamaban</strong> a los clientes en voz alta.</p>
+  <p>Me <strong>acerqué</strong> a un puesto donde una señora mayor <strong>vendía</strong> queso canario. Le <strong>pregunté</strong> el precio y ella me <strong>dio</strong> un trozo para probar.</p>
+  <p class="dlg">—¡Pruébalo, no te va a decepcionar! — me <strong>dijo</strong>.</p>
+  <p><strong>Tenía</strong> razón. <strong>Compré</strong> medio kilo.</p>
+  <p>Después <strong>encontré</strong> un bar pequeño. <strong>Pedí</strong> papas arrugadas con mojo verde y de postre <strong>tomé</strong> bienmesabe. Lo <strong>probé</strong> por primera vez y me <strong>quedé</strong> sin palabras. <strong>Era</strong> dulce, con un sabor a almendra y a algo que no <strong>supe</strong> identificar.</p>
+  <p>La señora del bar me <strong>preguntó</strong> de dónde <strong>era</strong>. Cuando le <strong>dije</strong> que <strong>era</strong> de Suecia, se <strong>sorprendió</strong> mucho.</p>
+  <p class="dlg">—¿Y cómo aprendiste español tan bien?<br>—Lo estudié en el instituto — le <strong>contesté</strong>.<br>—Pues dile a tu profesora que hace un buen trabajo.</p>
+  <p><strong>Volví</strong> al hotel con la barriga llena y con ganas de volver al mercado al día siguiente.</p>
+</div>
+
+<div class="q-hdr">🧠 Preguntas — Läsförståelse</div>
+
+<div class="qcard"><span class="qtag">L1</span><span class="qtype">Opción múltiple</span>
+<div class="qtext">¿Por qué la narradora fue al mercado?
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+<div class="mc-opts" data-answer="b" data-section="las">
+<div class="mc-opt" data-v="a" onclick="selectMC(this)">Porque tenía que comprar ingredientes para cocinar.</div>
+<div class="mc-opt" data-v="b" onclick="selectMC(this)">Era su primera visita y quería conocerlo.</div>
+<div class="mc-opt" data-v="c" onclick="selectMC(this)">Tenía una cita con la señora del queso.</div>
+<div class="mc-opt" data-v="d" onclick="selectMC(this)">Buscaba un restaurante recomendado.</div>
+</div></div>
+
+<div class="qcard"><span class="qtag">L2</span><span class="qtype">Verdadero o Falso</span>
+<table class="vf-tbl"><thead><tr><th>Afirmación</th><th>Svar</th></tr></thead>
+<tbody>
+  <tr data-answer="F" data-section="las"><td>a) La narradora había probado el bienmesabe antes de este viaje.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+  <tr data-answer="F" data-section="las"><td>b) El bar donde comió era caro.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+  <tr data-answer="V" data-section="las"><td>c) La señora del bar se sorprendió de que la narradora hablara español.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+</tbody></table></div>
+
+<div class="qcard"><span class="qtag">L3</span><span class="qtype">Gramática — Preteritum oregelbundet</span>
+<div class="qtext">Busca en el texto <strong>cinco verbos en pretérito indefinido irregular</strong> (ser/ir/hacer/tener/poder/poner/decir/dar/saber…). Escribe la forma y el infinitivo.
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+<table class="gtbl" style="margin-top:.6rem">
+  <thead><tr><th>Forma en el texto</th><th>Infinitivo</th></tr></thead>
+  <tbody>
+    <tr><td class="blank"></td><td class="blank"></td></tr>
+    <tr><td class="blank"></td><td class="blank"></td></tr>
+    <tr><td class="blank"></td><td class="blank"></td></tr>
+    <tr><td class="blank"></td><td class="blank"></td></tr>
+    <tr><td class="blank"></td><td class="blank"></td></tr>
+  </tbody>
+</table></div>
+
+<div class="qcard"><span class="qtag">L4</span><span class="qtype">Gramática — A personal</span>
+<div class="qtext">Hitta i texten <strong>två meningar</strong> där <em>a personal</em> används framför direktobjekt, och <strong>en mening</strong> där det <em>inte</em> används (fast det finns ett direktobjekt). Förklara regeln.
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div></div>
+
+<div class="qcard"><span class="qtag">L5</span><span class="qtype">Gramática — Bindeord</span>
+<div class="qtext">Hitta de spanska bindeorden som motsvarar: <em>sedan / efteråt · till slut · till en början · och den gången · utan</em>. Skriv dem med ett exempel ur texten.
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div></div>
+
+<!-- ── GRAMMATIK M2 ── -->
+<hr class="sdiv">
+
+<div class="ratta-wrap">
+  <button class="ratta-btn" onclick="ratta('m2','las')">✓ Rätta mina svar</button>
+  <p class="ratta-note">Räknar L1 (MC) och L2 (V/F)</p>
+  <div class="ratta-result" id="rr-m2-las"></div>
+</div>
+<div class="sec-banner banner-gram"><span class="sec-icon">✏️</span><span class="sec-title">Grammatisk tillämpning</span></div>
+
+<div class="ex-h">Övning 2.1 <small>Oregelbundet preteritum — Lucktext</small></div>
+<div class="ex-block">
+  <div class="ex-inst">Fyll i rätt form av verbet i preteritum. Alla verb är oregelbundna.<button class="show-btn" onclick="toggleAns('ans-m2-0')">👁 Visa svar</button>
+<div class="ans-panel" id="ans-m2-0"><ul class="fa"><li><span class="fan">1</span><span class="fac">dijo</span></li><li><span class="fan">2</span><span class="fac">fui · traje</span></li><li><span class="fan">3</span><span class="fac">puso</span></li><li><span class="fan">4</span><span class="fac">pude</span></li><li><span class="fan">5</span><span class="fac">tuvo · Hicimos · estuvo</span></li><li><span class="fan">6</span><span class="fac">quiso · di</span></li></ul></div>
+</div>
+  <ol class="ex-list">
+    <li><span class="n">1.</span>Mi amigo me <input type="text" class="fl-input"> (decir) que quería aprender a cocinar.</li>
+    <li><span class="n">2.</span>Yo <input type="text" class="fl-input"> (ir) a su casa por la tarde y le <input type="text" class="fl-input"> (traer) todos los ingredientes.</li>
+    <li><span class="n">3.</span>Él <input type="text" class="fl-input"> (poner) la mesa mientras yo empezaba a cocinar.</li>
+    <li><span class="n">4.</span>Sin embargo, <input type="text" class="fl-input"> (haber) un problema: no <input type="text" class="fl-input"> (poder/yo) encontrar la sartén.</li>
+    <li><span class="n">5.</span>Al final él la <input type="text" class="fl-input"> (tener) en su cuarto. <input type="text" class="fl-input"> (hacer/nosotros) una tortilla y <input type="text" class="fl-input"> (estar) deliciosa.</li>
+    <li><span class="n">6.</span>Él <input type="text" class="fl-input"> (querer) comerla toda solo pero yo no se la <input type="text" class="fl-input"> (dar/yo).</li>
+    <li><span class="n">7.</span>Aquella noche <input type="text" class="fl-input"> (venir) también su hermana y entre todos nos la <input type="text" class="fl-input"> (comer).</li>
+  </ol>
+</div>
+
+<div class="ex-h">Övning 2.2 <small>Imperativ — Recept på tortilla española</small></div>
+<div class="ex-block">
+  <div class="ex-inst">Skriv imperativ (tú) i affirmativ och negativ form.<button class="show-btn" onclick="toggleAns('ans-m2-1')">👁 Visa svar</button>
+<div class="ans-panel" id="ans-m2-1"><ul class="fa"><li><span class="fan">lavar</span><span class="fac">lava / no laves</span></li><li><span class="fan">cortar</span><span class="fac">corta / no cortes</span></li><li><span class="fan">añadir</span><span class="fac">añade / no añadas</span></li><li><span class="fan">batir</span><span class="fac">bate / no batas</span></li><li><span class="fan">olvidar</span><span class="fac">— / no olvides</span></li><li><span class="fan">servir</span><span class="fac">sirve / no sirvas</span></li></ul></div>
+</div>
+  <table class="gtbl">
+    <thead><tr><th>Instruktion</th><th>Afirmativo (tú)</th><th>Negativo (tú)</th></tr></thead>
+    <tbody>
+      <tr><td>lavar las patatas</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>cortar las patatas en rodajas</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>añadir demasiada sal</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>batir los huevos bien</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>olvidar dar la vuelta</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>servir fría (sirve caliente)</td><td class="blank"></td><td class="blank"></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="ex-h">Övning 2.3 <small>A personal — Lägg till eller stryk</small></div>
+<div class="ex-block">
+  <div class="ex-inst">Lägg till <em>a</em> där det behövs. Skriv "—" om det inte behövs. Förklara din regel på svenska.<button class="show-btn" onclick="toggleAns('ans-m2-2')">👁 Visa svar</button>
+<div class="ans-panel" id="ans-m2-2"><ul class="fa"><li><span class="fan">1</span><span class="fac">a  <em>(persona específica)</em></span></li><li><span class="fan">2</span><span class="fac">—  <em>(cosa)</em></span></li><li><span class="fan">3</span><span class="fac">a  <em>(persona conocida)</em></span></li><li><span class="fan">4</span><span class="fac">—  <em>(no es persona)</em></span></li><li><span class="fan">5</span><span class="fac">a  <em>(persona específica)</em></span></li><li><span class="fan">6</span><span class="fac">al  <em>(a+el)</em></span></li></ul></div>
+</div>
+  <ol class="ex-list">
+    <li><span class="n">1.</span>Vi _____ la profesora en el pasillo.</li>
+    <li><span class="n">2.</span>Ella compró _____ unas manzanas en el mercado.</li>
+    <li><span class="n">3.</span>¿Has llamado _____ tu madre hoy?</li>
+    <li><span class="n">4.</span>Busco _____ un buen restaurante cerca de aquí.</li>
+    <li><span class="n">5.</span>Busco _____ mi amiga María — ¿la has visto?</li>
+    <li><span class="n">6.</span>Conozco _____ el alcalde de la ciudad.</li>
+  </ol>
+  <div style="margin-top:.8rem;font-size:.88rem"><strong>Min regel:</strong> <input type="text" class="fl-input" style="width:380px"></div>
+</div>
+
+<hr class="sdiv">
+<div class="sec-banner banner-kult"><span class="sec-icon">🌍</span><span class="sec-title">Kulturell reflektion</span></div>
+<div class="kult-box">
+  <div class="kult-title">Skrivuppgift 2: Matvanor och traditioner</div>
+  <div class="kult-prompt">Escribe <strong>8–12 meningar</strong>:</div>
+  <ul>
+    <li>¿Qué receta tradicional de tu familia o tu país presentarías? Descríbela.</li>
+    <li>¿Qué diferencias hay entre las tradiciones culinarias de Suecia y las de España/Canarias?</li>
+    <li>¿Crees que es importante mantener las recetas tradicionales?</li>
+  </ul>
+  <div class="kult-note">Tänk på att använda oregelbundet preteritum och imperativ vid processbeskrivning. Använd bindeord: <em>primero · luego · después · al final · sin embargo</em></div>
+</div>
+
+</div></section>
+
+</div><!-- /tab-m2 -->
+<!-- ═══════════════════════════ MODUL 3 ═══════════════════════════ -->
+<div id="tab-m3" class="tab-panel">
+<section id="m3" class="module m3">
+<div class="module-header" data-num="III">
+  <div class="mtag">Modul 3 · 1b Mucho más que sol y playa</div>
+  <h2>Mallorca — turism, traditioner och minnen</h2>
+  <div class="msub">Imperfekt · Preteritum vs. imperfekt · Demonstrativa pronomen</div>
+</div>
+<div class="module-body">
+
+<table class="ctable">
+  <thead><tr><th>Kommunikation</th><th>Språkliga moment</th><th>Kultur</th></tr></thead>
+  <tbody>
+    <tr><td>Förstå intervju och dialog</td><td>Imperfekt</td><td>Turism i Spanien</td></tr>
+    <tr><td>Uttrycka sig i dåtid</td><td>Växlingen preteritum ↔ imperfekt</td><td>Traditioner och högtider</td></tr>
+    <tr><td>Uttrycka åsikter om turism</td><td>Demonstrativa pronomen</td><td>Mallorca bortom turismen</td></tr>
+    <tr><td>TF: Beskriva en tradition</td><td>Vocabulario: Traditioner och högtider</td><td></td></tr>
+  </tbody>
+</table>
+
+<!-- ── HÖRFÖRSTÅELSE M3 ── -->
+<div class="sec-banner banner-hor"><span class="sec-icon">🎧</span><span class="sec-title">Hörförståelse</span><span class="sec-type">Lyssna UTAN att läsa texten</span></div>
+
+<div class="audio-wrap">
+  <div class="audio-ball">🎧</div>
+  <div class="audio-info"><div class="audio-name">El viaje de Juan a Mallorca — más que sol y playa</div><div class="audio-file">m3_dialog.mp3</div></div>
+  <audio controls preload="none"><source src="m3_dialog.mp3" type="mpeg"></audio>
+</div>
+<div class="step-guide">
+  <div class="step-item"><span class="step-num">1</span><span>Lyssna och notera: Vad lär sig Juan om turism och mallorcansk vardagskultur?</span></div>
+  <div class="step-item"><span class="step-num">2</span><span>Svara på H1–H5 utan att se texten.</span></div>
+</div>
+
+<div class="q-hdr">🧠 Preguntas — Hörförståelse</div>
+
+<div class="qcard"><span class="qtag">H1</span><span class="qtype">Opción múltiple</span>
+<div class="qtext">¿Qué fue lo que más sorprendió a Juan en Mallorca?</div>
+<div class="mc-opts" data-answer="b" data-section="hor">
+<div class="mc-opt" data-v="a" onclick="selectMC(this)">La calidad de las playas y el clima</div>
+<div class="mc-opt" data-v="b" onclick="selectMC(this)">La mezcla entre turismo internacional y vida local</div>
+<div class="mc-opt" data-v="c" onclick="selectMC(this)">El alto precio de los apartamentos</div>
+<div class="mc-opt" data-v="d" onclick="selectMC(this)">La cantidad de museos en la isla</div>
+</div></div>
+<div class="mc-opts" data-answer="b" data-section="hor">
+<div class="mc-opt" data-v="a" onclick="selectMC(this)">Las mejores playas y hoteles de la isla.</div>
+<div class="mc-opt" data-v="b" onclick="selectMC(this)">La Mallorca auténtica — historia, cultura y gastronomía.</div>
+<div class="mc-opt" data-v="c" onclick="selectMC(this)">Los parques de atracciones más famosos.</div>
+<div class="mc-opt" data-v="d" onclick="selectMC(this)">Las mejores discotecas de la costa.</div>
+</div></div>
+
+<div class="qcard"><span class="qtag">H2</span><span class="qtype">Verdadero o Falso</span>
+<table class="vf-tbl"><thead><tr><th>Afirmación</th><th>Svar</th></tr></thead>
+<tbody>
+  <tr data-answer="F" data-section="hor"><td>a) Juan y su familia pasaron todo el viaje descansando en la playa.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+  <tr data-answer="V" data-section="hor"><td>b) La mujer de la tienda dice que los locales intentan mantener sus costumbres.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+  <tr data-answer="F" data-section="hor"><td>c) Juan cree que el turismo solo tiene efectos positivos.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+</tbody></table></div>
+
+<div class="qcard"><span class="qtag">H3</span><span class="qtype">Respuesta abierta</span>
+<div class="qtext">¿Qué vieron Juan y su familia durante la excursión al interior de la isla?</div>
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+<ol class="ex-list" style="margin-top:.5rem">
+  <li><span class="n">1.</span><input type="text" class="fl-input" style="width:320px"></li>
+  <li><span class="n">2.</span><input type="text" class="fl-input" style="width:320px"></li>
+  <li><span class="n">3.</span><input type="text" class="fl-input" style="width:320px"></li>
+</ol></div>
+
+<div class="qcard"><span class="qtag">H4</span><span class="qtype">Gramática auditiva — Imperfekt</span>
+<div class="qtext">Juan usa el imperfecto para describir las rutinas del viaje. Escribe <strong>tres formas de imperfecto</strong> que recuerdes. <em>(Exempel: solían, iban, visitaban…)</em></div>
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+
+<div class="qcard"><span class="qtag">H5</span><span class="qtype">Reflexión personal</span>
+<div class="qtext">Juan dice que lo mejor del viaje no fue solo el paisaje, sino lo que aprendieron sobre la cultura y la gente. ¿Estás de acuerdo? ¿Qué es lo más importante para ti cuando viajas? Escribe 4–5 meningar.</div>
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+
+<!-- ── LÄSFÖRSTÅELSE M3 ── -->
+<hr class="sdiv">
+
+<div class="ratta-wrap">
+  <button class="ratta-btn" onclick="ratta('m3','hor')">✓ Rätta mina svar</button>
+  <p class="ratta-note">Räknar H1 (MC) och H2 (V/F)</p>
+  <div class="ratta-result" id="rr-m3-hor"></div>
+</div>
+<div class="sec-banner banner-las"><span class="sec-icon">📖</span><span class="sec-title">Läsförståelse</span><span class="sec-type">Ny text — artikel om turism och traditioner på Mallorca</span></div>
+
+<div class="text-box">
+  <p><strong>Mallorca y el turismo: ¿tradición o espectáculo?</strong></p>
+  <p>Cada año, más de trece millones de turistas visitan Mallorca. <strong>Esta</strong> cifra, que <strong>parecía</strong> imposible hace cincuenta años, ha transformado completamente la isla.</p>
+  <p>En <strong>aquella</strong> época, cuando el turismo todavía no <strong>había llegado</strong>, los mallorquines <strong>vivían</strong> principalmente de la agricultura y la pesca. Los pueblos del interior <strong>eran</strong> tranquilos y las tradiciones se <strong>transmitían</strong> de generación en generación.</p>
+  <p>Entonces <strong>llegaron</strong> los primeros turistas: primero alemanes, luego británicos. <strong>Aquel</strong> primer hotel moderno que se <strong>construyó</strong> en los años sesenta <strong>fue</strong> el inicio de una transformación imparable.</p>
+  <p>Hoy, la situación <strong>es</strong> contradictoria. Por un lado, el turismo ha dado trabajo y prosperidad. Por otro lado, ha homogeneizado la costa hasta hacerla casi irreconocible. <strong>Esos</strong> edificios altos y modernos que dominan el horizonte <strong>sustituyeron</strong> a casas tradicionales que <strong>llevaban</strong> siglos en pie.</p>
+  <p>Las tradiciones, sin embargo, resisten. Las fiestas de Sant Joan, los cossiers, la música de xeremies — todo sigue celebrándose. La pregunta que muchos se hacen es: ¿siguen siendo auténticas cuando se convierten en espectáculo?</p>
+  <p>Joan Ramis, historiador mallorquín, lo explica así: "Las tradiciones siempre han evolucionado. Lo importante no es que sean idénticas al pasado, sino que tengan un significado real para quienes las viven. Si <strong>este</strong> pueblo sigue bailando los cossiers con emoción genuina, <strong>eso</strong> es auténtico."</p>
+</div>
+
+<div class="q-hdr">🧠 Preguntas — Läsförståelse</div>
+
+<div class="qcard"><span class="qtag">L1</span><span class="qtype">Opción múltiple</span>
+<div class="qtext">¿Cómo ganaban la vida los mallorquines antes del turismo masivo?
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+<div class="mc-opts" data-answer="b" data-section="las">
+<div class="mc-opt" data-v="a" onclick="selectMC(this)">Del turismo y el comercio.</div>
+<div class="mc-opt" data-v="b" onclick="selectMC(this)">Principalmente de la agricultura y la pesca.</div>
+<div class="mc-opt" data-v="c" onclick="selectMC(this)">De la industria textil.</div>
+<div class="mc-opt" data-v="d" onclick="selectMC(this)">De la exportación de productos artesanales.</div>
+</div></div>
+
+<div class="qcard"><span class="qtag">L2</span><span class="qtype">Verdadero o Falso</span>
+<table class="vf-tbl"><thead><tr><th>Afirmación</th><th>Svar</th></tr></thead>
+<tbody>
+  <tr data-answer="F" data-section="las"><td>a) Todos los elementos de la cultura mallorquina han desaparecido por el turismo.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+  <tr data-answer="F" data-section="las"><td>b) Joan Ramis cree que las tradiciones tienen que ser idénticas al pasado para ser auténticas.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+  <tr data-answer="V" data-section="las"><td>c) El primer hotel moderno se construyó en los años sesenta.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+</tbody></table></div>
+
+<div class="qcard"><span class="qtag">L3</span><span class="qtype">Gramática — Demonstrativa pronomen</span>
+<div class="qtext">Busca en el texto <strong>cinco formas demostrativas</strong> (este, ese, aquel + variantes). Escríbelas con el sustantivo al que se refieren y explica qué distancia indica cada una.
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+<table class="gtbl" style="margin-top:.6rem">
+  <thead><tr><th>Forma demostrativa</th><th>Substantiv</th><th>Avstånd (nära/mitt/långt)</th></tr></thead>
+  <tbody>
+    <tr><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+    <tr><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+    <tr><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+    <tr><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+    <tr><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+  </tbody>
+</table></div>
+
+<div class="qcard"><span class="qtag">L4</span><span class="qtype">Gramática — Preteritum vs. Imperfekt</span>
+<div class="qtext">Välj <strong>fyra verbpar</strong> ur texten där preteritum och imperfekt förekommer nära varandra. Förklara varför respektive tempus används. Använd: <strong>A)</strong> Avslutad handling · <strong>B)</strong> Bakgrund/tillstånd · <strong>C)</strong> Upprepat handlande.
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div></div>
+
+<div class="qcard"><span class="qtag">L5</span><span class="qtype">Respuesta abierta</span>
+<div class="qtext">Joan Ramis definierar autenticitet. Med egna ord: vad menar han? Håller du med? Skriv 4–6 meningar på spanska.
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div></div>
+
+<!-- ── GRAMMATIK M3 ── -->
+<hr class="sdiv">
+
+<div class="ratta-wrap">
+  <button class="ratta-btn" onclick="ratta('m3','las')">✓ Rätta mina svar</button>
+  <p class="ratta-note">Räknar L1 (MC) och L2 (V/F)</p>
+  <div class="ratta-result" id="rr-m3-las"></div>
+</div>
+<div class="sec-banner banner-gram"><span class="sec-icon">✏️</span><span class="sec-title">Grammatisk tillämpning</span></div>
+
+<div class="ex-h">Övning 3.1 <small>Imperfekt — Lucktext</small></div>
+<div class="ex-block">
+  <div class="ex-inst">Fyll i imperfekt. -AR: <em>-aba</em> · -ER/-IR: <em>-ía</em>. Oregelbundna: ser/ir/ver.<button class="show-btn" onclick="toggleAns('ans-m3-0')">👁 Visa svar</button>
+<div class="ans-panel" id="ans-m3-0"><ul class="fa"><li><span class="fan">1</span><span class="fac">era · vivía</span></li><li><span class="fan">2</span><span class="fac">íbamos</span></li><li><span class="fan">3</span><span class="fac">preparaba</span></li><li><span class="fan">4</span><span class="fac">se conocían · se ayudaban</span></li><li><span class="fan">5</span><span class="fac">hablaba · estaban</span></li><li><span class="fan">6</span><span class="fac">había</span></li></ul></div>
+</div>
+  <ol class="ex-list">
+    <li><span class="n">1.</span>Cuando yo <input type="text" class="fl-input"> (ser) pequeño, mi familia <input type="text" class="fl-input"> (vivir) en un pueblo pequeño.</li>
+    <li><span class="n">2.</span>Todos los veranos <input type="text" class="fl-input"> (ir/nos) a la playa y <input type="text" class="fl-input"> (pasar) semanas enteras allí.</li>
+    <li><span class="n">3.</span>Mi abuela siempre nos <input type="text" class="fl-input"> (preparar) la comida y nos <input type="text" class="fl-input"> (contar) historias.</li>
+    <li><span class="n">4.</span>Los vecinos <input type="text" class="fl-input"> (conocerse) todos y <input type="text" class="fl-input"> (ayudarse) mucho.</li>
+    <li><span class="n">5.</span>Antes la gente <input type="text" class="fl-input"> (hablar) más con los vecinos y no todos <input type="text" class="fl-input"> (estar) tan ocupados.</li>
+    <li><span class="n">6.</span>Mi abuela dice que antes <input type="text" class="fl-input"> (haber) más comunidad en el barrio.</li>
+  </ol>
+</div>
+
+<div class="ex-h">Övning 3.2 <small>Preteritum eller imperfekt? — Välj och motivera</small></div>
+<div class="ex-block">
+  <div class="ex-inst">Välj rätt tempus. Motivera: <strong>A)</strong> Avslutad handling · <strong>B)</strong> Bakgrund/tillstånd · <strong>C)</strong> Upprepat handlande · <strong>D)</strong> Pågående avbryts<button class="show-btn" onclick="toggleAns('ans-m3-1')">👁 Visa svar</button>
+<div class="ans-panel" id="ans-m3-1"><ul class="fa"><li><span class="fan">1</span><span class="fac">leía · entró  <em>(D)</em></span></li><li><span class="fan">2</span><span class="fac">era · vivía  <em>(B)</em></span></li><li><span class="fan">3</span><span class="fac">íbamos  <em>(C)</em></span></li><li><span class="fan">4</span><span class="fac">tuve · salió  <em>(A)</em></span></li><li><span class="fan">5</span><span class="fac">fue · había  <em>(A+B)</em></span></li></ul></div>
+</div>
+  <ol class="ex-list">
+    <li><span class="n">1.</span>Mientras yo (leer) <input type="text" class="fl-input"> el libro, mi hermano (entrar) <input type="text" class="fl-input"> gritando. → <input type="text" class="fl-input" style="width:30px"></li>
+    <li><span class="n">2.</span>Cuando (ser/ella) <input type="text" class="fl-input"> joven, (vivir) <input type="text" class="fl-input"> en Barcelona. → <input type="text" class="fl-input" style="width:30px"></li>
+    <li><span class="n">3.</span>Todos los sábados (ir/nos) <input type="text" class="fl-input"> al mercado. → <input type="text" class="fl-input" style="width:30px"></li>
+    <li><span class="n">4.</span>Ayer (tener/yo) <input type="text" class="fl-input"> un examen y al final (salir) <input type="text" class="fl-input"> bien. → <input type="text" class="fl-input" style="width:30px"></li>
+    <li><span class="n">5.</span>La fiesta (ser) <input type="text" class="fl-input"> estupenda — (haber) <input type="text" class="fl-input"> mucha gente. → <input type="text" class="fl-input" style="width:30px"></li>
+  </ol>
+</div>
+
+<div class="ex-h">Övning 3.3 <small>Demonstrativa pronomen — Fyll i rätt form</small></div>
+<div class="ex-block">
+  <div class="ex-inst">Välj rätt demonstrativt pronomen och böj det korrekt efter genus och numerus.<button class="show-btn" onclick="toggleAns('ans-m3-2')">👁 Visa svar</button>
+<div class="ans-panel" id="ans-m3-2"><ul class="fa"><li><span class="fan">1</span><span class="fac">Este</span></li><li><span class="fan">2</span><span class="fac">Aquella</span></li><li><span class="fan">3</span><span class="fac">esas</span></li><li><span class="fan">4</span><span class="fac">Aquellos</span></li><li><span class="fan">5</span><span class="fac">ese · este</span></li></ul></div>
+</div>
+  <ol class="ex-list">
+    <li><span class="n">1.</span><input type="text" class="fl-input"> libro que tengo aquí es el mejor del año. <em>(nära mig)</em></li>
+    <li><span class="n">2.</span><input type="text" class="fl-input"> casa que está en la colina es del siglo XVII. <em>(långt borta)</em></li>
+    <li><span class="n">3.</span>¿Me puedes pasar <input type="text" class="fl-input"> tijeras que tienes tú ahí? <em>(nära dig)</em></li>
+    <li><span class="n">4.</span><input type="text" class="fl-input"> tiempos eran mejores, dice mi abuelo. <em>(långt i det förflutna)</em></li>
+    <li><span class="n">5.</span>Me gusta más <input type="text" class="fl-input"> vestido que llevas tú que <input type="text" class="fl-input"> que llevo yo.</li>
+  </ol>
+</div>
+
+<hr class="sdiv">
+<div class="sec-banner banner-kult"><span class="sec-icon">🌍</span><span class="sec-title">Kulturell reflektion</span></div>
+<div class="kult-box">
+  <div class="kult-title">Skrivuppgift 3: Traditioner och högtider</div>
+  <div class="kult-prompt">Skriv <strong>8–12 meningar</strong> om en tradition som är viktig för dig eller din familj.</div>
+  <ul>
+    <li>¿Cómo <em>era</em> la celebración cuando eras pequeño/a? (imperfekt)</li>
+    <li>¿Qué <em>pasó</em> en una celebración concreta que recuerdas? (preteritum)</li>
+    <li>¿Ha cambiado la tradición con los años? ¿Crees que es importante mantenerla?</li>
+  </ul>
+  <div class="kult-note">Obligatoriska markörer: <em>por un lado… por otro lado… / sin embargo… / aunque…</em></div>
+</div>
+
+</div></section>
+
+</div><!-- /tab-m3 -->
+<!-- ═══════════════════════════ MODUL 4 ═══════════════════════════ -->
+<div id="tab-m4" class="tab-panel">
+<section id="m4" class="module m4">
+<div class="module-header" data-num="IV">
+  <div class="mtag">Modul 4 · 2a Una joven uruguaya sueña…</div>
+  <h2>Framtidsdrömmar och konjunktiv</h2>
+  <div class="msub">Intro konjunktiv · Önskan · Decir que · Ser/estar · Studier och arbete</div>
+</div>
+<div class="module-body">
+
+<table class="ctable">
+  <thead><tr><th>Kommunikation</th><th>Språkliga moment</th><th>Kultur</th></tr></thead>
+  <tbody>
+    <tr><td>Förstå intervju och faktatexter</td><td>Intro till presens konjunktiv</td><td>Pepe Mujica / Uruguay</td></tr>
+    <tr><td>Berätta om studier och arbete</td><td>Presens konj. önskan</td><td>Microrrelato: La tristeza</td></tr>
+    <tr><td>Uttrycka önskningar och åsikter</td><td>Presens konj. med <em>decir</em></td><td></td></tr>
+    <tr><td>TF: Argumentera i diskussion</td><td>Ser eller estar? · <em>Así se dice:</em> Åsikter</td><td></td></tr>
+  </tbody>
+</table>
+
+<!-- ── HÖRFÖRSTÅELSE M4 ── -->
+<div class="sec-banner banner-hor"><span class="sec-icon">🎧</span><span class="sec-title">Hörförståelse</span><span class="sec-type">Lyssna UTAN att läsa texten</span></div>
+
+<div class="audio-wrap">
+  <div class="audio-ball">🎧</div>
+  <div class="audio-info"><div class="audio-name">Mateo, joven uruguayo, habla de estudios y futuro</div><div class="audio-file">m4_dialog.mp3</div></div>
+  <audio controls preload="none"><source src="m4_dialog.mp3" type="mpeg"></audio>
+</div>
+<div class="step-guide">
+  <div class="step-item"><span class="step-num">1</span><span>Lyssna och notera: Vad anser Mateo om studier, framtid och utbildning?</span></div>
+  <div class="step-item"><span class="step-num">2</span><span>Svara på H1–H5 utan att se texten.</span></div>
+</div>
+
+<div class="q-hdr">🧠 Preguntas — Hörförståelse</div>
+
+<div class="qcard"><span class="qtag">H1</span><span class="qtype">Opción múltiple</span>
+<div class="qtext">¿Dónde vive Mateo?</div>
+<div class="mc-opts" data-answer="c" data-section="hor">
+<div class="mc-opt" data-v="a" onclick="selectMC(this)">En el centro de Montevideo</div>
+<div class="mc-opt" data-v="b" onclick="selectMC(this)">En otra ciudad de Uruguay</div>
+<div class="mc-opt" data-v="c" onclick="selectMC(this)">Cerca de Montevideo</div>
+<div class="mc-opt" data-v="d" onclick="selectMC(this)">En Buenos Aires</div>
+</div></div>
+<div class="mc-opts" data-answer="c" data-section="hor">
+<div class="mc-opt" data-v="a" onclick="selectMC(this)">Ingeniería</div>
+<div class="mc-opt" data-v="b" onclick="selectMC(this)">Medicina</div>
+<div class="mc-opt" data-v="c" onclick="selectMC(this)">Psicología</div>
+<div class="mc-opt" data-v="d" onclick="selectMC(this)">Derecho</div>
+</div></div>
+
+<div class="qcard"><span class="qtag">H2</span><span class="qtype">Verdadero o Falso</span>
+<table class="vf-tbl"><thead><tr><th>Afirmación</th><th>Svar</th></tr></thead>
+<tbody>
+  <tr data-answer="F" data-section="hor"><td>a) Mateo cree que todos los jóvenes deben saber exactamente qué quieren hacer desde muy jóvenes.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+  <tr data-answer="F" data-section="hor"><td>b) Para Mateo, una buena educación consiste únicamente en aprobar exámenes.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+  <tr data-answer="V" data-section="hor"><td>c) Al final de la entrevista, Mateo muestra una actitud abierta ante su futuro.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+</tbody></table></div>
+
+<div class="qcard"><span class="qtag">H3</span><span class="qtype">Respuesta abierta</span>
+<div class="qtext">¿Por qué Mateo valora especialmente a algunos de sus profesores del instituto?</div>
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+<ol class="ex-list" style="margin-top:.5rem">
+  <li><span class="n">1.</span><input type="text" class="fl-input" style="width:320px"></li>
+  <li><span class="n">2.</span><input type="text" class="fl-input" style="width:320px"></li>
+  <li><span class="n">3.</span><input type="text" class="fl-input" style="width:320px"></li>
+  <li><span class="n">4.</span><input type="text" class="fl-input" style="width:320px"></li>
+</ol></div>
+
+<div class="qcard"><span class="qtag">H4</span><span class="qtype">Gramática auditiva — Konjunktiv / cualidades</span>
+<div class="qtext">Mateo menciona tres cualidades o capacidades necesarias para prepararse para el futuro. ¿Cuáles son?</div>
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+
+<div class="qcard"><span class="qtag">H5</span><span class="qtype">Reflexión personal</span>
+<div class="qtext">Mateo dice: "El futuro no se puede controlar completamente, pero sí se puede preparar." ¿Estás de acuerdo? Escribe 4–5 meningar usando: <em>espero que / quiero que / ojalá…</em></div>
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+
+<!-- ── NP-FORMAT M4 ── -->
+<hr class="sdiv">
+
+<div class="ratta-wrap">
+  <button class="ratta-btn" onclick="ratta('m4','hor')">✓ Rätta mina svar</button>
+  <p class="ratta-note">Räknar H1 (MC) och H2 (V/F)</p>
+  <div class="ratta-result" id="rr-m4-hor"></div>
+</div>
+<div class="sec-banner banner-np"><span class="sec-icon">📋</span><span class="sec-title">NP-format — 8 korta klipp</span><span class="sec-type">Framtid · Studier · Önskningar</span></div>
+
+<div class="np-box">
+  <div class="np-inst-title">Instrucciones</div>
+  <div class="np-inst-text">Lyssna på <strong>8 korta samtal</strong> (Klipp 1–8) och para ihop varje klipp med rätt ämne. Det finns fler ämnen än klipp. Skriv bokstaven i svarsfältet.</div>
+  <div class="np-topics">
+    <div class="np-topic"><span class="tl">A.</span><span>Los planes de estudios</span></div>
+    <div class="np-topic"><span class="tl">B.</span><span>Las dificultades económicas</span></div>
+    <div class="np-topic"><span class="tl">C.</span><span>El trabajo a tiempo parcial</span></div>
+    <div class="np-topic"><span class="tl">D.</span><span>Las relaciones personales</span></div>
+    <div class="np-topic"><span class="tl">E.</span><span>Los sueños y deseos para el futuro</span></div>
+    <div class="np-topic"><span class="tl">F.</span><span>La vida en el extranjero</span></div>
+    <div class="np-topic"><span class="tl">G.</span><span>La salud mental y el estrés</span></div>
+    <div class="np-topic"><span class="tl">H.</span><span>Los viajes de intercambio</span></div>
+    <div class="np-topic"><span class="tl">I.</span><span>La política y los derechos sociales</span></div>
+    <div class="np-topic"><span class="tl">J.</span><span>El medio ambiente</span></div>
+    <div class="np-topic"><span class="tl">K.</span><span>La familia y los conflictos generacionales</span></div>
+    <div class="np-topic"><span class="tl">L.</span><span>La tecnología y el trabajo</span></div>
+  </div>
+  <div class="np-clips">
+    <div class="np-clip"><div class="np-clip-num">KLIPP 1 · m4_np_01.mp3</div><audio controls preload="none"><source src="m4_np_01.mp3" type="mpeg"></audio></div>
+    <div class="np-clip"><div class="np-clip-num">KLIPP 2 · m4_np_02.mp3</div><audio controls preload="none"><source src="m4_np_02.mp3" type="mpeg"></audio></div>
+    <div class="np-clip"><div class="np-clip-num">KLIPP 3 · m4_np_03.mp3</div><audio controls preload="none"><source src="m4_np_03.mp3" type="mpeg"></audio></div>
+    <div class="np-clip"><div class="np-clip-num">KLIPP 4 · m4_np_04.mp3</div><audio controls preload="none"><source src="m4_np_04.mp3" type="mpeg"></audio></div>
+    <div class="np-clip"><div class="np-clip-num">KLIPP 5 · m4_np_05.mp3</div><audio controls preload="none"><source src="m4_np_05.mp3" type="mpeg"></audio></div>
+    <div class="np-clip"><div class="np-clip-num">KLIPP 6 · m4_np_06.mp3</div><audio controls preload="none"><source src="m4_np_06.mp3" type="mpeg"></audio></div>
+    <div class="np-clip"><div class="np-clip-num">KLIPP 7 · m4_np_07.mp3</div><audio controls preload="none"><source src="m4_np_07.mp3" type="mpeg"></audio></div>
+    <div class="np-clip"><div class="np-clip-num">KLIPP 8 · m4_np_08.mp3</div><audio controls preload="none"><source src="m4_np_08.mp3" type="mpeg"></audio></div>
+  </div>
+  <div class="np-sel-row" data-mod="m4"><div class="np-cell"><label>Klipp 1</label><select class="np-sel" id="nps-m4-1"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option></select></div><div class="np-cell"><label>Klipp 2</label><select class="np-sel" id="nps-m4-2"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option></select></div><div class="np-cell"><label>Klipp 3</label><select class="np-sel" id="nps-m4-3"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option></select></div><div class="np-cell"><label>Klipp 4</label><select class="np-sel" id="nps-m4-4"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option></select></div><div class="np-cell"><label>Klipp 5</label><select class="np-sel" id="nps-m4-5"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option></select></div><div class="np-cell"><label>Klipp 6</label><select class="np-sel" id="nps-m4-6"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option></select></div><div class="np-cell"><label>Klipp 7</label><select class="np-sel" id="nps-m4-7"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option></select></div><div class="np-cell"><label>Klipp 8</label><select class="np-sel" id="nps-m4-8"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option></select></div></div>
+</div>
+
+<!-- ── LÄSFÖRSTÅELSE M4 ── -->
+<hr class="sdiv">
+
+<div class="ratta-wrap">
+  <button class="ratta-btn" onclick="ratta('m4','np')">✓ Rätta mina svar</button>
+  <p class="ratta-note">Räknar NP-matchningen (8 klipp)</p>
+  <div class="ratta-result" id="rr-m4-np"></div>
+</div>
+<div class="sec-banner banner-las"><span class="sec-icon">📖</span><span class="sec-title">Läsförståelse</span><span class="sec-type">Ny text — unga uruguayaner och deras drömmar</span></div>
+
+<div class="text-box">
+  <p><strong>La generación que sueña en Uruguay</strong></p>
+  <p>Montevideo. Son las siete de la tarde y cuatro jóvenes universitarios hablan sobre sus planes de futuro. Uruguay tiene algo especial: <strong>es</strong> un país que ha apostado por la educación como motor de cambio.</p>
+  <p>Valentina, 20 años, estudia medicina. "Quiero que mi generación cambie el sistema de salud", dice. "<strong>Es</strong> importante que los médicos lleguen a los barrios más vulnerables. Espero que cuando me gradúe pueda trabajar en el interior del país."</p>
+  <p>Martín, 21, estudia ingeniería informática. "Mi sueño <strong>es</strong> que Uruguay se convierta en un referente tecnológico de la región. Ya hay señales positivas — hay empresas que prefieren que sus equipos trabajen desde Montevideo. Ojalá eso siga creciendo."</p>
+  <p>Paula, 19, <strong>es</strong> quizás la más idealista. Estudia derecho y quiere que las leyes sean más justas. "Uruguay fue el primer país de América Latina en legalizar el matrimonio igualitario. Eso me hace pensar que <strong>es</strong> un país capaz de hacer cosas que otros todavía no se atreven a hacer."</p>
+  <p>Solo Andrés, 22, no <strong>está</strong> seguro de su futuro. "Me da miedo no encontrar trabajo en lo que estudié. Ojalá la situación económica mejore antes de que me gradúe." <strong>Es</strong> una preocupación que comparten muchos jóvenes en toda América Latina.</p>
+  <p>Lo que estos cuatro jóvenes tienen en común <strong>es</strong> la esperanza. Y quizás eso sea lo más uruguayo de todo.</p>
+</div>
+
+<div class="q-hdr">🧠 Preguntas — Läsförståelse</div>
+
+<div class="qcard"><span class="qtag">L1</span><span class="qtype">Opción múltiple</span>
+<div class="qtext">¿Cuántos jóvenes aparecen en el artículo y cuáles son sus carreras?
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+<div class="mc-opts" data-answer="b" data-section="las">
+<div class="mc-opt" data-v="a" onclick="selectMC(this)">Tres: medicina, derecho, ingeniería.</div>
+<div class="mc-opt" data-v="b" onclick="selectMC(this)">Cuatro: medicina, ingeniería informática, derecho y una carrera no mencionada.</div>
+<div class="mc-opt" data-v="c" onclick="selectMC(this)">Cuatro: medicina, informática, derecho y economía.</div>
+<div class="mc-opt" data-v="d" onclick="selectMC(this)">Dos: medicina y derecho.</div>
+</div></div>
+
+<div class="qcard"><span class="qtag">L2</span><span class="qtype">Verdadero o Falso</span>
+<table class="vf-tbl"><thead><tr><th>Afirmación</th><th>Svar</th></tr></thead>
+<tbody>
+  <tr data-answer="F" data-section="las"><td>a) Martín quiere que Uruguay sea una potencia militar.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+  <tr data-answer="V" data-section="las"><td>b) Uruguay fue el primer país latinoamericano en legalizar el matrimonio igualitario.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+  <tr data-answer="F" data-section="las"><td>c) Andrés está muy seguro de su futuro.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+</tbody></table></div>
+
+<div class="qcard"><span class="qtag">L3</span><span class="qtype">Gramática — Konjunktiv</span>
+<div class="qtext">Busca en el texto <strong>cinco construcciones con presente de subjuntivo</strong>. Escríbelas y explica por qué se usa el subjuntivo (önskan / opersonlig / rekommendation…).
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+<table class="gtbl" style="margin-top:.6rem">
+  <thead><tr><th>Construcción</th><th>Verbo en subj.</th><th>¿Por qué subj.?</th></tr></thead>
+  <tbody>
+    <tr><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+    <tr><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+    <tr><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+    <tr><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+    <tr><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+  </tbody>
+</table></div>
+
+<div class="qcard"><span class="qtag">L4</span><span class="qtype">Gramática — Ser / Estar</span>
+<div class="qtext">Texten innehåller många former av <em>ser</em> och <em>estar</em>. Hitta <strong>tre exempel på ser</strong> och <strong>två på estar</strong>. Förklara regeln för varje fall.
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+<table class="gtbl" style="margin-top:.6rem">
+  <thead><tr><th>Mening ur texten</th><th>Ser / Estar</th><th>Regel</th></tr></thead>
+  <tbody>
+    <tr><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+    <tr><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+    <tr><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+    <tr><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+    <tr><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+  </tbody>
+</table></div>
+
+<div class="qcard"><span class="qtag">L5</span><span class="qtype">Respuesta abierta</span>
+<div class="qtext">¿Con cuál de los cuatro jóvenes te identificas más? ¿Por qué? Escribe 5–6 meningar usando <em>espero que / quiero que / ojalá…</em>
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div></div>
+
+<!-- ── GRAMMATIK M4 ── -->
+<hr class="sdiv">
+
+<div class="ratta-wrap">
+  <button class="ratta-btn" onclick="ratta('m4','las')">✓ Rätta mina svar</button>
+  <p class="ratta-note">Räknar L1 (MC) och L2 (V/F)</p>
+  <div class="ratta-result" id="rr-m4-las"></div>
+</div>
+<div class="sec-banner banner-gram"><span class="sec-icon">✏️</span><span class="sec-title">Grammatisk tillämpning</span></div>
+
+<div class="ex-h">Övning 4.1 <small>Konjunktiv — Böjningstabellen</small></div>
+<div class="ex-block">
+  <div class="ex-inst">Fyll i hela tabellen. -AR → <em>-e/-es/-e/-emos/-éis/-en</em> · -ER/-IR → <em>-a/-as/-a/-amos/-áis/-an</em>. Oregelbundna: ser/ir/estar/tener/saber/poder/hacer.<button class="show-btn" onclick="toggleAns('ans-m4-0')">👁 Visa svar</button>
+<div class="ans-panel" id="ans-m4-0"><table class="ctb"><thead><tr><th>Inf.</th><th>yo</th><th>tú</th><th>él</th><th>nosotros</th><th>vosotros</th><th>ellos</th></tr></thead><tbody><tr><td>hablar</td><td>hable</td><td>hables</td><td>hable</td><td>hablemos</td><td>habléis</td><td>hablen</td></tr><tr><td>comer</td><td>coma</td><td>comas</td><td>coma</td><td>comamos</td><td>comáis</td><td>coman</td></tr><tr><td>vivir</td><td>viva</td><td>vivas</td><td>viva</td><td>vivamos</td><td>viváis</td><td>vivan</td></tr><tr><td>tener</td><td>tenga</td><td>tengas</td><td>tenga</td><td>tengamos</td><td>tengáis</td><td>tengan</td></tr><tr><td>ir</td><td>vaya</td><td>vayas</td><td>vaya</td><td>vayamos</td><td>vayáis</td><td>vayan</td></tr><tr><td>ser</td><td>sea</td><td>seas</td><td>sea</td><td>seamos</td><td>seáis</td><td>sean</td></tr></tbody></table></div>
+</div>
+  <table class="gtbl">
+    <thead><tr><th>Infinitivo</th><th>yo</th><th>tú</th><th>él/ella</th><th>nosotros</th><th>vosotros</th><th>ellos</th></tr></thead>
+    <tbody>
+      <tr><td>hablar</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>comer</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>vivir</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>tener</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>ir</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>ser</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>estar</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>poder</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="ex-h">Övning 4.2 <small>Konjunktiv för önskningar — Meningsbyggnad</small></div>
+<div class="ex-block">
+  <div class="ex-inst">Kombinera med konjunktiv. <strong>Mönster:</strong> Yo quiero + tú me ayudas → <em>Quiero que tú me ayudes.</em><button class="show-btn" onclick="toggleAns('ans-m4-1')">👁 Visa svar</button>
+<div class="ans-panel" id="ans-m4-1"><ul class="fa"><li><span class="fan">1</span><span class="fac">esperan que yo saque buenas notas</span></li><li><span class="fan">2</span><span class="fac">recomienda que nosotros leamos más</span></li><li><span class="fan">3</span><span class="fac">queremos que el gobierno haga más</span></li><li><span class="fan">4</span><span class="fac">Ojalá haya más tiempo</span></li><li><span class="fan">5</span><span class="fac">quiere que yo venga a su fiesta</span></li><li><span class="fan">6</span><span class="fac">Deseo que tú tengas mucha suerte</span></li></ul></div>
+</div>
+  <ol class="ex-list">
+    <li><span class="n">1.</span>Mis padres esperan / yo saco buenas notas. → <input type="text" class="fl-input" style="width:310px"></li>
+    <li><span class="n">2.</span>El profesor recomienda / nosotros leemos más. → <input type="text" class="fl-input" style="width:300px"></li>
+    <li><span class="n">3.</span>Queremos / el gobierno hace más por el medio ambiente. → <input type="text" class="fl-input" style="width:290px"></li>
+    <li><span class="n">4.</span>Ojalá / haber más tiempo para estudiar. → <input type="text" class="fl-input" style="width:310px"></li>
+    <li><span class="n">5.</span>Mi amiga quiere / yo vengo a su fiesta. → <input type="text" class="fl-input" style="width:310px"></li>
+    <li><span class="n">6.</span>Deseo / tú tienes mucha suerte en el examen. → <input type="text" class="fl-input" style="width:295px"></li>
+  </ol>
+</div>
+
+<div class="ex-h">Övning 4.3 <small>Decir que + konjunktiv eller indikativ?</small></div>
+<div class="ex-block">
+  <div class="ex-inst"><strong>Regel:</strong> <em>dice que</em> + indikativ = rapporterar information · <em>dice que</em> + konjunktiv = ger order/rekommendation<button class="show-btn" onclick="toggleAns('ans-m4-2')">👁 Visa svar</button>
+<div class="ans-panel" id="ans-m4-2"><ul class="fa"><li><span class="fan">1</span><span class="fac">bebas  <em>(subj—order)</em></span></li><li><span class="fan">2</span><span class="fac">estoy  <em>(indik—info)</em></span></li><li><span class="fan">3</span><span class="fac">estudiemos  <em>(subj—order)</em></span></li><li><span class="fan">4</span><span class="fac">es  <em>(indik—info)</em></span></li><li><span class="fan">5</span><span class="fac">sigamos  <em>(subj—order)</em></span></li><li><span class="fan">6</span><span class="fac">habrá/hay  <em>(indik—info)</em></span></li></ul></div>
+</div>
+  <ol class="ex-list">
+    <li><span class="n">1.</span>El médico dice que <input type="text" class="fl-input"> (beber/tú) más agua. <em>(order)</em></li>
+    <li><span class="n">2.</span>Mis padres dicen que <input type="text" class="fl-input"> (estar/yo) muy cansado. <em>(information)</em></li>
+    <li><span class="n">3.</span>La profesora nos dice que <input type="text" class="fl-input"> (estudiar) el subjuntivo. <em>(order)</em></li>
+    <li><span class="n">4.</span>Mi amigo dice que Uruguay <input type="text" class="fl-input"> (ser) increíble. <em>(information)</em></li>
+    <li><span class="n">5.</span>El guía dice que <input type="text" class="fl-input"> (seguir/nos) por este camino. <em>(order)</em></li>
+    <li><span class="n">6.</span>Los periódicos dicen que <input type="text" class="fl-input"> (haber) elecciones en otoño. <em>(information)</em></li>
+  </ol>
+</div>
+
+<hr class="sdiv">
+<div class="sec-banner banner-kult"><span class="sec-icon">🌍</span><span class="sec-title">Kulturell reflektion</span></div>
+<div class="kult-box">
+  <div class="kult-title">Skrivuppgift 4: Framtidsdrömmar och ideal</div>
+  <div class="kult-prompt">Skriv <strong>10–14 meningar</strong>:</div>
+  <ul>
+    <li>¿Cuáles son tus sueños? Usa: <em>espero que / quiero que / ojalá…</em></li>
+    <li>¿Qué tipo de trabajo te atrae? ¿Por qué?</li>
+    <li>¿Admiras a algún líder político o social? ¿Por qué?</li>
+    <li>¿Crees que un individuo puede cambiar la sociedad? Argumenta.</li>
+  </ul>
+  <div class="kult-note">Obligatoriskt: Minst 3 konjunktivkonstruktioner + åsiktsmarkörer: <em>creo que · pienso que · en mi opinión · me parece que</em></div>
+</div>
+
+</div></section>
+
+</div><!-- /tab-m4 -->
+<!-- ═══════════════════════════ MODUL 5 ═══════════════════════════ -->
+<div id="tab-m5" class="tab-panel">
+<section id="m5" class="module m5">
+<div class="module-header" data-num="V">
+  <div class="mtag">Modul 5 · 2b El milagro en los Andes</div>
+  <h2>Överlevnad, moral och vänskap</h2>
+  <div class="msub">Opersonlig konjunktiv · Oregelb. konjunktiv · Verb med prep. · Negation · Más que/de</div>
+</div>
+<div class="module-body">
+
+<table class="ctable">
+  <thead><tr><th>Kommunikation</th><th>Språkliga moment</th><th>Kultur</th></tr></thead>
+  <tbody>
+    <tr><td>Förstå artikel och berättande text</td><td>Presens konj. i opersonliga uttryck</td><td>Moraliska dilemman</td></tr>
+    <tr><td>Uttrycka sig i dåtid (avancerat)</td><td>Oregelbundna verb i presens konj.</td><td>Vänskap och lojalitet</td></tr>
+    <tr><td>Åsikter om vänskap och moral</td><td>Verb med preposition</td><td>Överlevnad i extrema situationer</td></tr>
+    <tr><td>TF: Diskutera moraliskt dilemma</td><td>Preteritum av tener/venir/decir · Nekade indefinita pronomen · Más que/más de</td><td></td></tr>
+  </tbody>
+</table>
+
+<!-- ── HÖRFÖRSTÅELSE M5 ── -->
+<div class="sec-banner banner-hor"><span class="sec-icon">🎧</span><span class="sec-title">Hörförståelse</span><span class="sec-type">Lyssna UTAN att läsa texten</span></div>
+
+<div class="audio-wrap">
+  <div class="audio-ball">🎧</div>
+  <div class="audio-info"><div class="audio-name">Laura y Javier: debate sobre el turismo</div><div class="audio-file">m5_dialog.mp3</div></div>
+  <audio controls preload="none"><source src="m5_dialog.mp3" type="mpeg"></audio>
+</div>
+<div class="step-guide">
+  <div class="step-item"><span class="step-num">1</span><span>Lyssna och notera: Vilka argument för och emot turism tar upp Laura och Javier?</span></div>
+  <div class="step-item"><span class="step-num">2</span><span>Svara på H1–H5 utan att se texten.</span></div>
+</div>
+
+<div class="q-hdr">🧠 Preguntas — Hörförståelse</div>
+
+<div class="qcard"><span class="qtag">H1</span><span class="qtype">Opción múltiple</span>
+<div class="qtext">¿Cuál es la conclusión principal del debate entre Laura y Javier?</div>
+<div class="mc-opts" data-answer="c" data-section="hor">
+<div class="mc-opt" data-v="a" onclick="selectMC(this)">El turismo siempre es bueno para las ciudades.</div>
+<div class="mc-opt" data-v="b" onclick="selectMC(this)">El turismo es negativo y debería limitarse mucho.</div>
+<div class="mc-opt" data-v="c" onclick="selectMC(this)">El turismo puede ser positivo pero necesita límites y responsabilidad.</div>
+<div class="mc-opt" data-v="d" onclick="selectMC(this)">El turismo solo beneficia a los hoteles y restaurantes.</div>
+</div></div>
+<div class="mc-opts" data-answer="b" data-section="hor">
+<div class="mc-opt" data-v="a" onclick="selectMC(this)">Un médico especializado en traumatología.</div>
+<div class="mc-opt" data-v="b" onclick="selectMC(this)">Un psicólogo especializado en situaciones de crisis extrema.</div>
+<div class="mc-opt" data-v="c" onclick="selectMC(this)">Un filósofo experto en ética.</div>
+<div class="mc-opt" data-v="d" onclick="selectMC(this)">Un periodista que cubre desastres naturales.</div>
+</div></div>
+
+<div class="qcard"><span class="qtag">H2</span><span class="qtype">Verdadero o Falso</span>
+<table class="vf-tbl"><thead><tr><th>Afirmación</th><th>Svar</th></tr></thead>
+<tbody>
+  <tr data-answer="F" data-section="hor"><td>a) Javier cree que el turismo nunca crea problemas.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+  <tr data-answer="V" data-section="hor"><td>b) Según Javier, una ciudad debe seguir siendo un lugar donde la gente pueda vivir.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+  <tr data-answer="F" data-section="hor"><td>c) Laura y Javier concluyen que hay que decir no al turismo.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+</tbody></table></div>
+
+<div class="qcard"><span class="qtag">H3</span><span class="qtype">Respuesta abierta</span>
+<div class="qtext">¿Qué problemas concretos menciona Javier cuando hay demasiado turismo? Escribe al menos tres.</div>
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+<ol class="ex-list" style="margin-top:.5rem">
+  <li><span class="n">1.</span><input type="text" class="fl-input" style="width:340px"></li>
+  <li><span class="n">2.</span><input type="text" class="fl-input" style="width:340px"></li>
+  <li><span class="n">3.</span><input type="text" class="fl-input" style="width:340px"></li>
+</ol></div>
+
+<div class="qcard"><span class="qtag">H4</span><span class="qtype">Gramática auditiva — Expresiones de opinión</span>
+<div class="qtext">Laura y Javier usan varias expresiones para dar su opinión. Escribe <strong>tres</strong> que recuerdes del audio. <em>(Exempel: en mi opinión, desde mi punto de vista…)</em></div>
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+
+<div class="qcard"><span class="qtag">H5</span><span class="qtype">Reflexión personal</span>
+<div class="qtext">Javier dice que viajar debería servir no solo para sacar fotos, sino también para aprender sobre otros lugares y otras formas de vivir. ¿Estás de acuerdo? Escribe 4–6 meningar con: <em>por un lado / por otro lado / sin embargo / en mi opinión</em></div>
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+
+<!-- ── NP-FORMAT M5 ── -->
+<hr class="sdiv">
+
+<div class="ratta-wrap">
+  <button class="ratta-btn" onclick="ratta('m5','hor')">✓ Rätta mina svar</button>
+  <p class="ratta-note">Räknar H1 (MC) och H2 (V/F)</p>
+  <div class="ratta-result" id="rr-m5-hor"></div>
+</div>
+<div class="sec-banner banner-np"><span class="sec-icon">📋</span><span class="sec-title">NP-format — 8 korta klipp</span><span class="sec-type">Moral · Vänskap · Överlevnad</span></div>
+
+<div class="np-box">
+  <div class="np-inst-title">Instrucciones</div>
+  <div class="np-inst-text">Lyssna på <strong>8 korta samtal</strong> och para ihop varje klipp med rätt ämne. Det finns fler ämnen än klipp. Skriv bokstaven i svarsfältet.</div>
+  <div class="np-topics">
+    <div class="np-topic"><span class="tl">A.</span><span>La amistad y la lealtad</span></div>
+    <div class="np-topic"><span class="tl">B.</span><span>Los dilemas morales</span></div>
+    <div class="np-topic"><span class="tl">C.</span><span>El miedo y el coraje</span></div>
+    <div class="np-topic"><span class="tl">D.</span><span>La gratitud y la esperanza</span></div>
+    <div class="np-topic"><span class="tl">E.</span><span>La solidaridad y el trabajo en equipo</span></div>
+    <div class="np-topic"><span class="tl">F.</span><span>El duelo y la pérdida</span></div>
+    <div class="np-topic"><span class="tl">G.</span><span>La justicia y la ética</span></div>
+    <div class="np-topic"><span class="tl">H.</span><span>Los medios de comunicación</span></div>
+    <div class="np-topic"><span class="tl">I.</span><span>La fe y la espiritualidad</span></div>
+    <div class="np-topic"><span class="tl">J.</span><span>El arrepentimiento</span></div>
+    <div class="np-topic"><span class="tl">K.</span><span>El liderazgo en situaciones extremas</span></div>
+    <div class="np-topic"><span class="tl">L.</span><span>La familia y el apoyo emocional</span></div>
+  </div>
+  <div class="np-clips">
+    <div class="np-clip"><div class="np-clip-num">KLIPP 1 · m5_np_01.mp3</div><audio controls preload="none"><source src="m5_np_01.mp3" type="mpeg"></audio></div>
+    <div class="np-clip"><div class="np-clip-num">KLIPP 2 · m5_np_02.mp3</div><audio controls preload="none"><source src="m5_np_02.mp3" type="mpeg"></audio></div>
+    <div class="np-clip"><div class="np-clip-num">KLIPP 3 · m5_np_03.mp3</div><audio controls preload="none"><source src="m5_np_03.mp3" type="mpeg"></audio></div>
+    <div class="np-clip"><div class="np-clip-num">KLIPP 4 · m5_np_04.mp3</div><audio controls preload="none"><source src="m5_np_04.mp3" type="mpeg"></audio></div>
+    <div class="np-clip"><div class="np-clip-num">KLIPP 5 · m5_np_05.mp3</div><audio controls preload="none"><source src="m5_np_05.mp3" type="mpeg"></audio></div>
+    <div class="np-clip"><div class="np-clip-num">KLIPP 6 · m5_np_06.mp3</div><audio controls preload="none"><source src="m5_np_06.mp3" type="mpeg"></audio></div>
+    <div class="np-clip"><div class="np-clip-num">KLIPP 7 · m5_np_07.mp3</div><audio controls preload="none"><source src="m5_np_07.mp3" type="mpeg"></audio></div>
+    <div class="np-clip"><div class="np-clip-num">KLIPP 8 · m5_np_08.mp3</div><audio controls preload="none"><source src="m5_np_08.mp3" type="mpeg"></audio></div>
+  </div>
+  <div class="np-sel-row" data-mod="m5"><div class="np-cell"><label>Klipp 1</label><select class="np-sel" id="nps-m5-1"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option></select></div><div class="np-cell"><label>Klipp 2</label><select class="np-sel" id="nps-m5-2"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option></select></div><div class="np-cell"><label>Klipp 3</label><select class="np-sel" id="nps-m5-3"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option></select></div><div class="np-cell"><label>Klipp 4</label><select class="np-sel" id="nps-m5-4"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option></select></div><div class="np-cell"><label>Klipp 5</label><select class="np-sel" id="nps-m5-5"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option></select></div><div class="np-cell"><label>Klipp 6</label><select class="np-sel" id="nps-m5-6"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option></select></div><div class="np-cell"><label>Klipp 7</label><select class="np-sel" id="nps-m5-7"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option></select></div><div class="np-cell"><label>Klipp 8</label><select class="np-sel" id="nps-m5-8"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option></select></div></div>
+</div>
+
+<!-- ── LÄSFÖRSTÅELSE M5 ── -->
+<hr class="sdiv">
+
+<div class="ratta-wrap">
+  <button class="ratta-btn" onclick="ratta('m5','np')">✓ Rätta mina svar</button>
+  <p class="ratta-note">Räknar NP-matchningen (8 klipp)</p>
+  <div class="ratta-result" id="rr-m5-np"></div>
+</div>
+<div class="sec-banner banner-las"><span class="sec-icon">📖</span><span class="sec-title">Läsförståelse</span><span class="sec-type">Ny text — psykologin bakom överlevnad i Anderna</span></div>
+
+<div class="text-box">
+  <p><strong>Lo que los Andes nos enseñaron sobre ser humanos</strong></p>
+  <p>Han pasado más de cincuenta años desde que dieciséis personas sobrevivieron setenta y dos días en las montañas más altas del mundo. Pero la historia sigue fascinando, no por el horror de lo que vivieron, sino por lo que revela sobre la naturaleza humana.</p>
+  <p>¿Qué hace que un ser humano siga adelante cuando todo indica que no hay salida? Los psicólogos señalan varios factores. Primero, la cohesión del grupo: nadie actuó solo. Cada decisión, por difícil que fuera, se tomó en conjunto. <strong>Es fundamental que se entienda esto:</strong> no fue un acto de supervivencia individual, sino colectiva.</p>
+  <p>Segundo, el propósito. Muchos de los supervivientes pensaban en sus familias. <strong>Es posible que ese pensamiento</strong> — "hay alguien que me necesita" — <strong>haya sido</strong> más poderoso que cualquier técnica de supervivencia.</p>
+  <p>Tercero, la capacidad de encontrar significado en el sufrimiento. Antonio Vizintín <strong>dijo</strong> en una entrevista: "Aquellos días me enseñaron más de lo que yo creía posible." <strong>Tuvo</strong> que reconstruir su vida desde cero, pero <strong>vino</strong> a la conclusión de que la experiencia lo había transformado positivamente.</p>
+  <p>El caso también nos obliga a reflexionar sobre la moral. ¿Puede justificarse cualquier acción si el objetivo es sobrevivir? Los filósofos no se ponen de acuerdo. <strong>Es imposible que alguien</strong> que no ha estado en esa situación <strong>juzgue</strong> con plena autoridad. Nadie nos dijo nada definitivo sobre este dilema.</p>
+  <p>Lo que sí es innegable: ninguno de los supervivientes salió igual que entró. Y su historia nos recuerda que los seres humanos somos capaces de mucho más de lo que creemos — tanto de lo mejor como de lo peor.</p>
+</div>
+
+<div class="q-hdr">🧠 Preguntas — Läsförståelse</div>
+
+<div class="qcard"><span class="qtag">L1</span><span class="qtype">Opción múltiple</span>
+<div class="qtext">¿Cuántos supervivientes hubo según el artículo?
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+<div class="mc-opts" data-answer="c" data-section="las">
+<div class="mc-opt" data-v="a" onclick="selectMC(this)">Doce</div>
+<div class="mc-opt" data-v="b" onclick="selectMC(this)">Catorce</div>
+<div class="mc-opt" data-v="c" onclick="selectMC(this)">Dieciséis</div>
+<div class="mc-opt" data-v="d" onclick="selectMC(this)">Veinte</div>
+</div></div>
+
+<div class="qcard"><span class="qtag">L2</span><span class="qtype">Verdadero o Falso</span>
+<table class="vf-tbl"><thead><tr><th>Afirmación</th><th>Svar</th></tr></thead>
+<tbody>
+  <tr data-answer="F" data-section="las"><td>a) Los supervivientes actuaron de forma completamente individual.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+  <tr data-answer="F" data-section="las"><td>b) Todos los filósofos están de acuerdo sobre los límites morales en situaciones extremas.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+  <tr data-answer="V" data-section="las"><td>c) Antonio Vizintín llegó a una conclusión positiva sobre su experiencia.</td><td><div class="vf-btn-wrap"><button class="vfb" data-val="V" onclick="selectVF(this)">V</button><button class="vfb" data-val="F" onclick="selectVF(this)">F</button></div></td></tr>
+</tbody></table></div>
+
+<div class="qcard"><span class="qtag">L3</span><span class="qtype">Gramática — Konjunktiv opersonliga uttryck</span>
+<div class="qtext">Busca en el texto <strong>cuatro construcciones impersonales con subjuntivo</strong>. Escríbelas completas.
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div>
+<ol class="ex-list" style="margin-top:.5rem">
+  <li><span class="n">1.</span><input type="text" class="fl-input" style="width:370px"></li>
+  <li><span class="n">2.</span><input type="text" class="fl-input" style="width:370px"></li>
+  <li><span class="n">3.</span><input type="text" class="fl-input" style="width:370px"></li>
+  <li><span class="n">4.</span><input type="text" class="fl-input" style="width:370px"></li>
+</ol></div>
+
+<div class="qcard"><span class="qtag">L4</span><span class="qtype">Gramática — Tener / venir / decir i preteritum + más que/más de</span>
+<div class="qtext">Hitta i texten de tre verbformerna av <em>tener, venir, decir</em> i preteritum. Skriv dem och deras infinitiv. Förklara sedan regeln för <em>más que</em> vs <em>más de</em> och ge ett eget exempel på vardera.
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div></div>
+
+<div class="qcard"><span class="qtag">L5</span><span class="qtype">Moralisk diskussion</span>
+<div class="qtext">Artikeln avslutas: "somos capaces de mucho más de lo que creemos — tanto de lo mejor como de lo peor." Vad menar författaren? Håller du med? Skriv 6–8 meningar med kontrastmarkörer: <em>sin embargo / por un lado… por otro lado / aunque / en conclusión</em>
+<textarea class="open-ta" rows="3" placeholder="Skriv ditt svar här..."></textarea>
+</div></div>
+
+<!-- ── GRAMMATIK M5 ── -->
+<hr class="sdiv">
+
+<div class="ratta-wrap">
+  <button class="ratta-btn" onclick="ratta('m5','las')">✓ Rätta mina svar</button>
+  <p class="ratta-note">Räknar L1 (MC) och L2 (V/F)</p>
+  <div class="ratta-result" id="rr-m5-las"></div>
+</div>
+<div class="sec-banner banner-gram"><span class="sec-icon">✏️</span><span class="sec-title">Grammatisk tillämpning</span></div>
+
+<div class="ex-h">Övning 5.1 <small>Oregelbundna verb i konjunktiv — Lucktext</small></div>
+<div class="ex-block">
+  <div class="ex-inst">Fyll i rätt oregelbunden konjunktivform.<button class="show-btn" onclick="toggleAns('ans-m5-0')">👁 Visa svar</button>
+<div class="ans-panel" id="ans-m5-0"><ul class="fa"><li><span class="fan">1</span><span class="fac">sepan</span></li><li><span class="fan">2</span><span class="fac">pueda</span></li><li><span class="fan">3</span><span class="fac">sea</span></li><li><span class="fan">4</span><span class="fac">tengamos</span></li><li><span class="fan">5</span><span class="fac">estés</span></li><li><span class="fan">6</span><span class="fac">vayan</span></li><li><span class="fan">7</span><span class="fac">hagas</span></li><li><span class="fan">8</span><span class="fac">sepáis</span></li></ul></div>
+</div>
+  <div class="ex-wb">ser: sea · ir: vaya · estar: esté · tener: tenga · saber: sepa · poder: pueda · hacer: haga</div>
+  <ol class="ex-list">
+    <li><span class="n">1.</span>Es importante que todos <input type="text" class="fl-input"> (saber) la verdad.</li>
+    <li><span class="n">2.</span>Ojalá él <input type="text" class="fl-input"> (poder) venir mañana.</li>
+    <li><span class="n">3.</span>No creo que eso <input type="text" class="fl-input"> (ser) la mejor solución.</li>
+    <li><span class="n">4.</span>Es necesario que nosotros <input type="text" class="fl-input"> (tener) más información.</li>
+    <li><span class="n">5.</span>Espero que tú <input type="text" class="fl-input"> (estar) bien después del examen.</li>
+    <li><span class="n">6.</span>Es imposible que ellos <input type="text" class="fl-input"> (ir) a pie hasta allí.</li>
+    <li><span class="n">7.</span>Quiero que tú <input type="text" class="fl-input"> (hacer) los ejercicios esta noche.</li>
+    <li><span class="n">8.</span>Es fundamental que vosotros <input type="text" class="fl-input"> (saber) estas formas.</li>
+  </ol>
+</div>
+
+<div class="ex-h">Övning 5.2 <small>Tener/venir/decir i preteritum + más que / más de</small></div>
+<div class="ex-block">
+  <div class="ex-inst"><strong>Del A:</strong> Fyll i preteritum av tener, venir eller decir.<button class="show-btn" onclick="toggleAns('ans-m5-1')">👁 Visa svar</button>
+<div class="ans-panel" id="ans-m5-1"><ul class="fa"><li><span class="fan">A1</span><span class="fac">tuvo</span></li><li><span class="fan">A2</span><span class="fac">vinisteis</span></li><li><span class="fan">A3</span><span class="fac">dijo</span></li><li><span class="fan">A4</span><span class="fac">tuvimos</span></li><li><span class="fan">A5</span><span class="fac">dijo</span></li><li><span class="fan">A6</span><span class="fac">vinieron</span></li><li><span class="fan">B1</span><span class="fac">más de  <em>(+siffra)</em></span></li><li><span class="fan">B2</span><span class="fac">más que  <em>(+jämförelse)</em></span></li><li><span class="fan">B3</span><span class="fac">más de</span></li><li><span class="fan">B4</span><span class="fac">más…que</span></li><li><span class="fan">B5</span><span class="fac">más de</span></li></ul></div>
+</div>
+  <ol class="ex-list">
+    <li><span class="n">1.</span>Ella <input type="text" class="fl-input"> (tener) mucho miedo durante la tormenta.</li>
+    <li><span class="n">2.</span>¿Cuándo <input type="text" class="fl-input"> (venir/vosotros) a España por primera vez?</li>
+    <li><span class="n">3.</span>El presidente <input type="text" class="fl-input"> (decir) que no habría más recortes.</li>
+    <li><span class="n">4.</span>Nosotros <input type="text" class="fl-input"> (tener) que esperar dos horas en el aeropuerto.</li>
+    <li><span class="n">5.</span>¿Qué te <input type="text" class="fl-input"> (decir/él) exactamente?</li>
+    <li><span class="n">6.</span>Mis amigos <input type="text" class="fl-input"> (venir) a visitarme la semana pasada.</li>
+  </ol>
+  <div class="ex-inst" style="margin-top:.9rem"><strong>Del B:</strong> Más que eller más de? Välj och motivera.</div>
+  <div style="font-size:.87rem;margin-bottom:.7rem"><strong>Regel:</strong> <em>más de</em> + <input type="text" class="fl-input" style="width:120px"> &nbsp;·&nbsp; <em>más que</em> + <input type="text" class="fl-input" style="width:140px"></div>
+  <ol class="ex-list">
+    <li><span class="n">1.</span>Hay <input type="text" class="fl-input" style="width:80px"> veinte personas esperando fuera.</li>
+    <li><span class="n">2.</span>Juan corre <input type="text" class="fl-input" style="width:80px"> su hermano.</li>
+    <li><span class="n">3.</span>Pasaron <input type="text" class="fl-input" style="width:80px"> setenta días en las montañas.</li>
+    <li><span class="n">4.</span>Esta película es <input type="text" class="fl-input" style="width:80px"> interesante <input type="text" class="fl-input" style="width:60px"> yo pensaba.</li>
+    <li><span class="n">5.</span>El libro tiene <input type="text" class="fl-input" style="width:80px"> trescientas páginas.</li>
+  </ol>
+</div>
+
+<div class="ex-h">Övning 5.3 <small>Verb med preposition + nekade indefinita pronomen</small></div>
+<div class="ex-block">
+  <div class="ex-inst"><strong>Del A:</strong> Fyll i rätt preposition (a / de / en / con / por).<button class="show-btn" onclick="toggleAns('ans-m5-2')">👁 Visa svar</button>
+<div class="ans-panel" id="ans-m5-2"><ul class="fa"><li><span class="fan">A1</span><span class="fac">con</span></li><li><span class="fan">A2</span><span class="fac">de</span></li><li><span class="fan">A3</span><span class="fac">de</span></li><li><span class="fan">A4</span><span class="fac">de</span></li><li><span class="fan">A5</span><span class="fac">en</span></li><li><span class="fan">A6</span><span class="fac">en</span></li><li><span class="fan">B1</span><span class="fac">Nadie me llamó anoche.</span></li><li><span class="fan">B2</span><span class="fac">Nunca como nada antes del examen.</span></li><li><span class="fan">B3</span><span class="fac">No tengo ningún amigo en Uruguay.</span></li><li><span class="fan">B4</span><span class="fac">No me dijo nada importante.</span></li></ul></div>
+</div>
+  <ol class="ex-list">
+    <li><span class="n">1.</span>Soñé <input type="text" class="fl-input" style="width:45px"> volver a casa después de mucho tiempo.</li>
+    <li><span class="n">2.</span>Dependemos <input type="text" class="fl-input" style="width:45px"> la ayuda de los demás para sobrevivir.</li>
+    <li><span class="n">3.</span>Se alegraron mucho <input type="text" class="fl-input" style="width:45px"> vernos llegar.</li>
+    <li><span class="n">4.</span>No me acuerdo <input type="text" class="fl-input" style="width:45px"> su nombre.</li>
+    <li><span class="n">5.</span>Confío <input type="text" class="fl-input" style="width:45px"> mis amigos en los momentos difíciles.</li>
+    <li><span class="n">6.</span>Insistió <input type="text" class="fl-input" style="width:45px"> buscar otra solución.</li>
+  </ol>
+  <div class="ex-inst" style="margin-top:.9rem"><strong>Del B:</strong> Omvandla till nekade meningar med nadie / nada / nunca / ningún.</div>
+  <ol class="ex-list">
+    <li><span class="n">1.</span>Alguien me llamó anoche. → <input type="text" class="fl-input" style="width:300px"></li>
+    <li><span class="n">2.</span>Siempre como algo antes del examen. → <input type="text" class="fl-input" style="width:300px"></li>
+    <li><span class="n">3.</span>Tengo algún amigo en Uruguay. → <input type="text" class="fl-input" style="width:300px"></li>
+    <li><span class="n">4.</span>Me dijo algo importante. → <input type="text" class="fl-input" style="width:300px"></li>
+  </ol>
+</div>
+
+<hr class="sdiv">
+<div class="sec-banner banner-kult"><span class="sec-icon">🌍</span><span class="sec-title">Kulturell reflektion</span></div>
+<div class="kult-box">
+  <div class="kult-title">Skrivuppgift 5: Moraliska dilemman — vänskap och lojalitet</div>
+  <div class="kult-prompt">Skriv ett argumenterande text på <strong>12–16 meningar</strong>:</div>
+  <ul>
+    <li>¿Qué significa para ti la amistad verdadera?</li>
+    <li>¿Cuáles son los límites morales? ¿Puede cualquier acción justificarse en situaciones extremas?</li>
+    <li>¿Qué lección de vida se puede aprender de la historia de los Andes?</li>
+  </ul>
+  <div class="kult-note"><strong>Obligatoriskt:</strong> ≥3 opersonliga konjunktivkonstruktioner · ≥2 oregelbundna verb i konjunktiv · ≥4 kontrastmarkörer (<em>sin embargo / por un lado / aunque / en conclusión</em>)</div>
+</div>
+
+</div></section>
+
+</div><!-- /tab-m5 -->
+<!-- ═══════════════════════════ FACIT ═══════════════════════════ -->
+<div id="tab-facit" class="tab-panel">
+<section id="facit-section">
+<div class="facit-head"><h2>✓ Facit — Provförberedelse</h2><p>Klicka på varje modul för att visa svaren. Försök alltid på egen hand först!</p></div>
+
+<details class="fm"><summary><span class="ndot" style="background:var(--m1)"></span> Modul 1 — ¡Empezamos! <span class="arr">▶</span></summary>
+<div class="fb">
+  <div class="fs"><h4>Hörförståelse H1–H5</h4><ul class="fa">
+    <li><span class="fn">H1</span><span class="ac">b) De México</span></li>
+    <li><span class="fn">H2a</span><span class="ac">F</span> <span class="an">— Ana dice que es MÁS picante que la española.</span></li>
+    <li><span class="fn">H2b</span><span class="ac">F</span> <span class="an">— Carlos no nämns vilja besöka Mexiko i dialogen.</span></li>
+    <li><span class="fn">H2c</span><span class="ac">F</span> <span class="an">— Mexicanerna talar spanska annorlunda, inte exakt likadant.</span></li>
+    <li><span class="fn">H3–5</span><span class="an">Öppna svar — bedöms individuellt.</span></li>
+  </ul></div>
+  <div class="fs"><h4>NP-format M1 — Facit</h4><ul class="fa">
+    <li><span class="fn">Klipp 1</span><span class="ac">I</span> <span class="an">(el deporte)</span></li>
+    <li><span class="fn">Klipp 2</span><span class="ac">G</span> <span class="an">(los viajes)</span></li>
+    <li><span class="fn">Klipp 3</span><span class="ac">C</span> <span class="an">(los estudios)</span></li>
+    <li><span class="fn">Klipp 4</span><span class="ac">B</span> <span class="an">(la comida)</span></li>
+    <li><span class="fn">Klipp 5</span><span class="ac">D</span> <span class="an">(el tiempo libre)</span></li>
+    <li><span class="fn">Klipp 6</span><span class="ac">J</span> <span class="an">(tecnología/redes)</span></li>
+    <li><span class="fn">Klipp 7</span><span class="ac">A</span> <span class="an">(tradiciones culturales)</span></li>
+    <li><span class="fn">Klipp 8</span><span class="ac">H</span> <span class="an">(música y arte)</span></li>
+  </ul></div>
+  <div class="fs"><h4>Läsförståelse L1–L5</h4><ul class="fa">
+    <li><span class="fn">L1</span><span class="ac">b)</span> <span class="an">— La gente era menos comunicativa en público.</span></li>
+    <li><span class="fn">L2a</span><span class="ac">F</span> <span class="an">— Es MÁS verde que Madrid.</span></li>
+    <li><span class="fn">L2b</span><span class="ac">F</span> <span class="an">— Le gusta el salmón y algunas cosas.</span></li>
+    <li><span class="fn">L2c</span><span class="ac">V</span></li>
+    <li><span class="fn">L3</span><span class="an">Exx: me gustó Madrid · me ha encantado · me gustan los pepinos (neg.) · me parece · les ha gustado</span></li>
+    <li><span class="fn">L4</span><span class="an">Exx: más tranquila que / más verde que / más difícil del mundo (sup.)</span></li>
+    <li><span class="fn">L5</span><span class="an">1. Ivar me lo ha enseñado. 2. Diego se la cocina.</span></li>
+  </ul></div>
+  <div class="fs"><h4>Övning 1.1</h4><ul class="fa">
+    <li><span class="fn">1</span><span class="ac">gusta</span></li><li><span class="fn">2</span><span class="ac">aburren</span></li><li><span class="fn">3</span><span class="ac">duele</span></li><li><span class="fn">4</span><span class="ac">encantan</span></li>
+    <li><span class="fn">5</span><span class="ac">aburre</span></li><li><span class="fn">6</span><span class="ac">interesa</span></li><li><span class="fn">7</span><span class="ac">molesta</span></li><li><span class="fn">8</span><span class="ac">interesa / gusta</span></li>
+  </ul></div>
+  <div class="fs"><h4>Övning 1.2</h4><ul class="fa">
+    <li><span class="fn">1</span><span class="ac">se la explica</span> <span class="an">(les → se när det kombineras med lo/la)</span></li>
+    <li><span class="fn">2</span><span class="ac">me los manda</span></li>
+    <li><span class="fn">3</span><span class="ac">¿La has visto ya?</span></li>
+    <li><span class="fn">4</span><span class="ac">Voy a dárselas.</span></li>
+    <li><span class="fn">5</span><span class="ac">nos lo enseñan</span></li>
+  </ul></div>
+  <div class="fs"><h4>Övning 1.3</h4><ul class="fa">
+    <li><span class="fn">1</span><span class="ac">El español es más difícil que el sueco.</span></li>
+    <li><span class="fn">2</span><span class="ac">Madrid es más grande que Estocolmo.</span></li>
+    <li><span class="fn">3</span><span class="ac">Este ejercicio es tan fácil como el anterior.</span></li>
+    <li><span class="fn">4</span><span class="ac">La gramática es menos interesante que el vocabulario.</span></li>
+    <li><span class="fn">5</span><span class="ac">Este libro es el mejor de la clase.</span></li>
+  </ul></div>
+</div></details>
+
+<details class="fm"><summary><span class="ndot" style="background:var(--m2)"></span> Modul 2 — La pastelera canaria <span class="arr">▶</span></summary>
+<div class="fb">
+  <div class="fs"><h4>Hörförståelse H1–H5</h4><ul class="fa">
+    <li><span class="fn">H1</span><span class="ac">b) Una entrevista en la radio</span></li>
+    <li><span class="fn">H2a</span><span class="ac">F</span> <span class="an">— La miel de palma es de La Gomera.</span></li>
+    <li><span class="fn">H2b</span><span class="ac">F</span> <span class="an">— Aprendió principalmente de su abuela.</span></li>
+    <li><span class="fn">H2c</span><span class="ac">V</span></li>
+    <li><span class="fn">H3</span><span class="an">Pasos: 1) tostar almendras, 2) mezclar con azúcar y huevos, 3) añadir miel, 4) cocinar a fuego lento.</span></li>
+    <li><span class="fn">H4</span><span class="an">Exx: tuesta / mézclalas / añade / no dejes / deja</span></li>
+    <li><span class="fn">H5</span><span class="an">Öppet svar. Roberto: ingredientes frescos y locales, ten paciencia.</span></li>
+  </ul></div>
+  <div class="fs"><h4>Läsförståelse L1–L5</h4><ul class="fa">
+    <li><span class="fn">L1</span><span class="ac">b)</span> <span class="an">— Era su primera visita al mercado.</span></li>
+    <li><span class="fn">L2a</span><span class="ac">F</span> <span class="an">— Era la primera vez.</span></li>
+    <li><span class="fn">L2b</span><span class="ac">F</span> <span class="an">— Pagó ocho euros, que era barato.</span></li>
+    <li><span class="fn">L2c</span><span class="ac">V</span></li>
+    <li><span class="fn">L3</span><span class="an">Oregelb.: fui · fue · había / había visto · dio · dijo · supe · compré → fui, ser/ir; fue, ser/ir; dio, dar; dijo, decir; supe, saber</span></li>
+    <li><span class="fn">L4</span><span class="an">A personal: "me dio un trozo para probar" (mig, indirekt) · "le pregunté" — söker person · Utan a: "probé el bienmesabe" (sak)</span></li>
+    <li><span class="fn">L5</span><span class="an">luego/después · — (ingen direkt "till slut") · al principio · — · sin</span></li>
+  </ul></div>
+  <div class="fs"><h4>Övning 2.1</h4><ul class="fa">
+    <li><span class="fn">1</span><span class="ac">dijo</span> <span class="fn" style="margin-left:.5rem">2</span><span class="ac">fui / traje</span> <span class="fn" style="margin-left:.5rem">3</span><span class="ac">puso</span> <span class="fn" style="margin-left:.5rem">4</span><span class="ac">hubo / pude</span></li>
+    <li><span class="fn">5</span><span class="ac">tuvo / Hicimos / estuvo</span> <span class="fn" style="margin-left:.5rem">6</span><span class="ac">quiso / di</span> <span class="fn" style="margin-left:.5rem">7</span><span class="ac">vino / comimos</span></li>
+  </ul></div>
+  <div class="fs"><h4>Övning 2.2 — Imperativ</h4><ul class="fa">
+    <li><span class="fn">lavar</span><span class="ac">lava / no laves</span></li>
+    <li><span class="fn">cortar</span><span class="ac">corta / no cortes</span></li>
+    <li><span class="fn">añadir</span><span class="ac">añade / no añadas</span></li>
+    <li><span class="fn">batir</span><span class="ac">bate / no batas</span></li>
+    <li><span class="fn">olvidar</span><span class="ac">— / no olvides</span></li>
+    <li><span class="fn">servir</span><span class="ac">sirve caliente / no sirvas frío</span></li>
+  </ul></div>
+  <div class="fs"><h4>Övning 2.3 — A personal</h4><ul class="fa">
+    <li><span class="fn">1</span><span class="ac">a</span> <span class="an">(specifik känd person)</span></li>
+    <li><span class="fn">2</span><span class="ac">—</span> <span class="an">(ospecifik sak)</span></li>
+    <li><span class="fn">3</span><span class="ac">a</span> <span class="an">(person, känd)</span></li>
+    <li><span class="fn">4</span><span class="ac">—</span> <span class="an">(ospecifik plats)</span></li>
+    <li><span class="fn">5</span><span class="ac">a</span> <span class="an">(person, specifik)</span></li>
+    <li><span class="fn">6</span><span class="ac">al</span> <span class="an">(person, specifik)</span></li>
+  </ul></div>
+</div></details>
+
+<details class="fm"><summary><span class="ndot" style="background:var(--m3)"></span> Modul 3 — Mucho más que sol y playa <span class="arr">▶</span></summary>
+<div class="fb">
+  <div class="fs"><h4>Hörförståelse H1–H5</h4><ul class="fa">
+    <li><span class="fn">H1</span><span class="ac">b)</span> <span class="an">— Historia, cultura y gastronomía.</span></li>
+    <li><span class="fn">H2a</span><span class="ac">F</span> <span class="an">— Han erkänner både positiva och negativa effekter.</span></li>
+    <li><span class="fn">H2b</span><span class="ac">V</span></li>
+    <li><span class="fn">H2c</span><span class="ac">F</span> <span class="an">— Las fiestas de Sant Joan son en junio.</span></li>
+    <li><span class="fn">H3–5</span><span class="an">Öppna svar.</span></li>
+  </ul></div>
+  <div class="fs"><h4>Läsförståelse L1–L5</h4><ul class="fa">
+    <li><span class="fn">L1</span><span class="ac">b)</span></li>
+    <li><span class="fn">L2a</span><span class="ac">F</span> <span class="an">— Tradicionerna lever kvar.</span></li>
+    <li><span class="fn">L2b</span><span class="ac">F</span> <span class="an">— Ramis säger att de inte behöver vara identiska.</span></li>
+    <li><span class="fn">L2c</span><span class="ac">V</span></li>
+    <li><span class="fn">L3</span><span class="an">Esta cifra (nära/neutral) · aquella época (långt) · aquel primer hotel (långt) · esos edificios (mellannära) · este pueblo (nära)</span></li>
+    <li><span class="fn">L4–5</span><span class="an">Öppna svar — se anvisningarna i texten.</span></li>
+  </ul></div>
+  <div class="fs"><h4>Övning 3.1</h4><ul class="fa">
+    <li><span class="fn">1</span><span class="ac">era / vivía</span> <span class="fn" style="margin-left:.5rem">2</span><span class="ac">íbamos / pasábamos</span> <span class="fn" style="margin-left:.5rem">3</span><span class="ac">preparaba / contaba</span></li>
+    <li><span class="fn">4</span><span class="ac">se conocían / se ayudaban</span> <span class="fn" style="margin-left:.5rem">5</span><span class="ac">hablaba / estaban</span> <span class="fn" style="margin-left:.5rem">6</span><span class="ac">había</span></li>
+  </ul></div>
+  <div class="fs"><h4>Övning 3.2</h4><ul class="fa">
+    <li><span class="fn">1</span><span class="ac">leía (D) / entró (A)</span></li>
+    <li><span class="fn">2</span><span class="ac">era (B) / vivía (B)</span></li>
+    <li><span class="fn">3</span><span class="ac">íbamos (C)</span></li>
+    <li><span class="fn">4</span><span class="ac">tuve (A) / salió (A)</span></li>
+    <li><span class="fn">5</span><span class="ac">fue (A) / había (B)</span></li>
+  </ul></div>
+  <div class="fs"><h4>Övning 3.3</h4><ul class="fa">
+    <li><span class="fn">1</span><span class="ac">Este</span> <span class="fn" style="margin-left:.5rem">2</span><span class="ac">Aquella</span> <span class="fn" style="margin-left:.5rem">3</span><span class="ac">esas</span> <span class="fn" style="margin-left:.5rem">4</span><span class="ac">Aquellos</span> <span class="fn" style="margin-left:.5rem">5</span><span class="ac">ese / este</span></li>
+  </ul></div>
+</div></details>
+
+<details class="fm"><summary><span class="ndot" style="background:var(--m4)"></span> Modul 4 — Una joven uruguaya sueña… <span class="arr">▶</span></summary>
+<div class="fb">
+  <div class="fs"><h4>Hörförståelse H1–H5</h4><ul class="fa">
+    <li><span class="fn">H1</span><span class="ac">c) Psicología</span></li>
+    <li><span class="fn">H2a</span><span class="ac">F</span> <span class="an">— Diego vill ha ett arbete med samhällspåverkan, inte bara tjäna pengar.</span></li>
+    <li><span class="fn">H2b</span><span class="ac">V</span></li>
+    <li><span class="fn">H2c</span><span class="ac">V</span></li>
+    <li><span class="fn">H3–5</span><span class="an">Öppna svar.</span></li>
+  </ul></div>
+  <div class="fs"><h4>NP-format M4 — Facit</h4><ul class="fa">
+    <li><span class="fn">Klipp 1</span><span class="ac">G</span> <span class="an">(salud mental y estrés)</span></li>
+    <li><span class="fn">Klipp 2</span><span class="ac">E</span> <span class="an">(sueños y deseos)</span></li>
+    <li><span class="fn">Klipp 3</span><span class="ac">H</span> <span class="an">(viajes de intercambio)</span></li>
+    <li><span class="fn">Klipp 4</span><span class="ac">C</span> <span class="an">(trabajo a tiempo parcial)</span></li>
+    <li><span class="fn">Klipp 5</span><span class="ac">J</span> <span class="an">(medio ambiente)</span></li>
+    <li><span class="fn">Klipp 6</span><span class="ac">K</span> <span class="an">(familia y conflictos)</span></li>
+    <li><span class="fn">Klipp 7</span><span class="ac">A</span> <span class="an">(planes de estudios)</span></li>
+    <li><span class="fn">Klipp 8</span><span class="ac">F</span> <span class="an">(vida en el extranjero)</span></li>
+  </ul></div>
+  <div class="fs"><h4>Läsförståelse L1–L5</h4><ul class="fa">
+    <li><span class="fn">L1</span><span class="ac">b)</span> <span class="an">— Fyra: medicina, informática, derecho + en okänd (Andrés nämner inte sin karriär).</span></li>
+    <li><span class="fn">L2a</span><span class="ac">F</span> <span class="an">— Martín vill att Uruguay ska bli ett teknologiskt föredöme.</span></li>
+    <li><span class="fn">L2b</span><span class="ac">V</span></li>
+    <li><span class="fn">L2c</span><span class="ac">F</span> <span class="an">— Andrés está inseguro.</span></li>
+    <li><span class="fn">L3–5</span><span class="an">Öppna svar — se grammatiktips i häftet.</span></li>
+  </ul></div>
+  <div class="fs"><h4>Övning 4.1 — Konjunktivtabellen</h4>
+  <table class="ctb"><thead><tr><th>Inf.</th><th>yo</th><th>tú</th><th>él</th><th>nosotros</th><th>vosotros</th><th>ellos</th></tr></thead>
+  <tbody>
+    <tr><td>hablar</td><td>hable</td><td>hables</td><td>hable</td><td>hablemos</td><td>habléis</td><td>hablen</td></tr>
+    <tr><td>comer</td><td>coma</td><td>comas</td><td>coma</td><td>comamos</td><td>comáis</td><td>coman</td></tr>
+    <tr><td>vivir</td><td>viva</td><td>vivas</td><td>viva</td><td>vivamos</td><td>viváis</td><td>vivan</td></tr>
+    <tr><td>tener</td><td>tenga</td><td>tengas</td><td>tenga</td><td>tengamos</td><td>tengáis</td><td>tengan</td></tr>
+    <tr><td>ir</td><td>vaya</td><td>vayas</td><td>vaya</td><td>vayamos</td><td>vayáis</td><td>vayan</td></tr>
+    <tr><td>ser</td><td>sea</td><td>seas</td><td>sea</td><td>seamos</td><td>seáis</td><td>sean</td></tr>
+    <tr><td>estar</td><td>esté</td><td>estés</td><td>esté</td><td>estemos</td><td>estéis</td><td>estén</td></tr>
+    <tr><td>poder</td><td>pueda</td><td>puedas</td><td>pueda</td><td>podamos</td><td>podáis</td><td>puedan</td></tr>
+  </tbody></table></div>
+  <div class="fs"><h4>Övning 4.2</h4><ul class="fa">
+    <li><span class="fn">1</span><span class="ac">esperan que yo saque buenas notas</span></li>
+    <li><span class="fn">2</span><span class="ac">recomienda que nosotros leamos más</span></li>
+    <li><span class="fn">3</span><span class="ac">queremos que el gobierno haga más</span></li>
+    <li><span class="fn">4</span><span class="ac">Ojalá haya más tiempo</span></li>
+    <li><span class="fn">5</span><span class="ac">quiere que yo venga a su fiesta</span></li>
+    <li><span class="fn">6</span><span class="ac">Deseo que tú tengas mucha suerte</span></li>
+  </ul></div>
+  <div class="fs"><h4>Övning 4.3</h4><ul class="fa">
+    <li><span class="fn">1</span><span class="ac">bebas</span> <span class="an">(subj — order)</span></li>
+    <li><span class="fn">2</span><span class="ac">estoy</span> <span class="an">(indik — information)</span></li>
+    <li><span class="fn">3</span><span class="ac">estudiemos</span> <span class="an">(subj — order)</span></li>
+    <li><span class="fn">4</span><span class="ac">es</span> <span class="an">(indik — information)</span></li>
+    <li><span class="fn">5</span><span class="ac">sigamos</span> <span class="an">(subj — order)</span></li>
+    <li><span class="fn">6</span><span class="ac">habrá / hay</span> <span class="an">(indik — information)</span></li>
+  </ul></div>
+</div></details>
+
+<details class="fm"><summary><span class="ndot" style="background:var(--m5)"></span> Modul 5 — El milagro en los Andes <span class="arr">▶</span></summary>
+<div class="fb">
+  <div class="fs"><h4>Hörförståelse H1–H5</h4><ul class="fa">
+    <li><span class="fn">H1</span><span class="ac">b)</span> <span class="an">— Psicólogo especializado en crisis extrema.</span></li>
+    <li><span class="fn">H2a</span><span class="ac">F</span> <span class="an">— Pablo säger att mental styrka och social koppling är viktigast.</span></li>
+    <li><span class="fn">H2b</span><span class="ac">F</span> <span class="an">— Pablo säger att det är omöjligt att bedöma utifrån.</span></li>
+    <li><span class="fn">H2c</span><span class="ac">V</span></li>
+    <li><span class="fn">H3</span><span class="an">Exx: Es fundamental que no esté solo · Es importante que haya propósito · Es necesario que reciban apoyo · Es posible que la situación no cambie</span></li>
+    <li><span class="fn">H4–5</span><span class="an">Öppna svar.</span></li>
+  </ul></div>
+  <div class="fs"><h4>NP-format M5 — Facit</h4><ul class="fa">
+    <li><span class="fn">Klipp 1</span><span class="ac">B</span> <span class="an">(dilemas morales)</span></li>
+    <li><span class="fn">Klipp 2</span><span class="ac">A</span> <span class="an">(amistad y lealtad)</span></li>
+    <li><span class="fn">Klipp 3</span><span class="ac">C</span> <span class="an">(miedo y coraje)</span></li>
+    <li><span class="fn">Klipp 4</span><span class="ac">E</span> <span class="an">(solidaridad y equipo)</span></li>
+    <li><span class="fn">Klipp 5</span><span class="ac">D</span> <span class="an">(gratitud y esperanza)</span></li>
+    <li><span class="fn">Klipp 6</span><span class="ac">F</span> <span class="an">(duelo y pérdida)</span></li>
+    <li><span class="fn">Klipp 7</span><span class="ac">H</span> <span class="an">(medios de comunicación)</span></li>
+    <li><span class="fn">Klipp 8</span><span class="ac">K</span> <span class="an">(liderazgo en crisis)</span></li>
+  </ul></div>
+  <div class="fs"><h4>Läsförståelse L1–L5</h4><ul class="fa">
+    <li><span class="fn">L1</span><span class="ac">c) Dieciséis</span></li>
+    <li><span class="fn">L2a</span><span class="ac">F</span> <span class="an">— Varje beslut fattades tillsammans.</span></li>
+    <li><span class="fn">L2b</span><span class="ac">F</span> <span class="an">— Filosoferna är oense.</span></li>
+    <li><span class="fn">L2c</span><span class="ac">V</span></li>
+    <li><span class="fn">L3</span><span class="an">Es fundamental que se entienda · Es posible que ese pensamiento haya sido · Es imposible que alguien juzgue · (Es innegable att det inte är subj.)</span></li>
+    <li><span class="fn">L4</span><span class="an">dijo (decir) · tuvo (tener) · vino (venir). Más de + siffra: más de cincuenta años. Más que + jämförelse: más poderoso que cualquier técnica.</span></li>
+    <li><span class="fn">L5</span><span class="an">Öppet svar.</span></li>
+  </ul></div>
+  <div class="fs"><h4>Övning 5.1</h4><ul class="fa">
+    <li><span class="fn">1</span><span class="ac">sepan</span> <span class="fn" style="margin-left:.5rem">2</span><span class="ac">pueda</span> <span class="fn" style="margin-left:.5rem">3</span><span class="ac">sea</span> <span class="fn" style="margin-left:.5rem">4</span><span class="ac">tengamos</span></li>
+    <li><span class="fn">5</span><span class="ac">estés</span> <span class="fn" style="margin-left:.5rem">6</span><span class="ac">vayan</span> <span class="fn" style="margin-left:.5rem">7</span><span class="ac">hagas</span> <span class="fn" style="margin-left:.5rem">8</span><span class="ac">sepáis</span></li>
+  </ul></div>
+  <div class="fs"><h4>Övning 5.2</h4><ul class="fa">
+    <li><span class="fn">A1</span><span class="ac">tuvo</span> <span class="fn" style="margin-left:.5rem">A2</span><span class="ac">vinisteis</span> <span class="fn" style="margin-left:.5rem">A3</span><span class="ac">dijo</span> <span class="fn" style="margin-left:.5rem">A4</span><span class="ac">tuvimos</span> <span class="fn" style="margin-left:.5rem">A5</span><span class="ac">dijo</span> <span class="fn" style="margin-left:.5rem">A6</span><span class="ac">vinieron</span></li>
+    <li><span class="fn">Regel</span><span class="ac">más de</span> <span class="an">+ siffra/antal ·</span> <span class="ac">más que</span> <span class="an">+ jämförelse</span></li>
+    <li><span class="fn">B1</span><span class="ac">más de</span> <span class="fn" style="margin-left:.5rem">B2</span><span class="ac">más que</span> <span class="fn" style="margin-left:.5rem">B3</span><span class="ac">más de</span> <span class="fn" style="margin-left:.5rem">B4</span><span class="ac">más…que</span> <span class="fn" style="margin-left:.5rem">B5</span><span class="ac">más de</span></li>
+  </ul></div>
+  <div class="fs"><h4>Övning 5.3</h4><ul class="fa">
+    <li><span class="fn">A1</span><span class="ac">con</span> <span class="fn" style="margin-left:.5rem">A2</span><span class="ac">de</span> <span class="fn" style="margin-left:.5rem">A3</span><span class="ac">de</span> <span class="fn" style="margin-left:.5rem">A4</span><span class="ac">de</span> <span class="fn" style="margin-left:.5rem">A5</span><span class="ac">en</span> <span class="fn" style="margin-left:.5rem">A6</span><span class="ac">en</span></li>
+    <li><span class="fn">B1</span><span class="ac">Nadie me llamó anoche.</span></li>
+    <li><span class="fn">B2</span><span class="ac">Nunca como nada antes del examen.</span></li>
+    <li><span class="fn">B3</span><span class="ac">No tengo ningún amigo en Uruguay.</span></li>
+    <li><span class="fn">B4</span><span class="ac">No me dijo nada importante.</span></li>
+  </ul></div>
+</div></details>
+
+</section>
+
+<div style="text-align:center;padding:2rem 0 1rem;color:var(--ink-muted);font-size:.82rem;font-style:italic">¡Mucho ánimo y buena suerte! 🎯 · Spanska 4 · Provförberedelse</div>
+</div><!-- /tab-facit -->
+</div><!-- /page -->
+
+<script>
+const NP_FACIT = {"m1": ["I", "G", "C", "B", "D", "J", "A", "H"], "m4": ["G", "E", "H", "C", "J", "K", "A", "F"], "m5": ["B", "A", "C", "E", "D", "F", "H", "K"]};
+
+// ── TABS ─────────────────────────────────────────────────
+function showTab(id) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn-tab').forEach(b => b.classList.remove('active'));
+  const p = document.getElementById('tab-' + id);
+  if (p) p.classList.add('active');
+  const b = document.querySelector('.nav-btn-tab[data-tab="' + id + '"]');
+  if (b) b.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// ── MC: välj utan feedback ────────────────────────────────
+function selectMC(opt) {
+  opt.closest('.mc-opts').querySelectorAll('.mc-opt').forEach(o =>
+    o.classList.remove('mc-sel','mc-correct','mc-wrong'));
+  opt.classList.add('mc-sel');
+}
+
+// ── VF: välj utan feedback ────────────────────────────────
+function selectVF(btn) {
+  btn.closest('tr').querySelectorAll('.vfb').forEach(b =>
+    b.classList.remove('vfb-sel','vfb-correct','vfb-wrong'));
+  btn.classList.add('vfb-sel');
+}
+
+// ── RÄTTA en sektion ──────────────────────────────────────
+function ratta(mod, section) {
+  const container = document.getElementById('tab-' + mod);
+  if (!container) return;
+  let correct = 0, total = 0;
+
+  if (section === 'np') {
+    // NP-matchning
+    const ans = NP_FACIT[mod] || [];
+    ans.forEach((a, i) => {
+      const sel = document.getElementById('nps-' + mod + '-' + (i+1));
+      if (!sel) return;
+      sel.classList.remove('np-correct','np-wrong');
+      total++;
+      if (sel.value === a) { sel.classList.add('np-correct'); correct++; }
+      else sel.classList.add('np-wrong');
+    });
+  } else {
+    // MC
+    container.querySelectorAll('.mc-opts[data-section="' + section + '"]')
+      .forEach(opts => {
+        total++;
+        const sel = opts.querySelector('.mc-sel');
+        opts.querySelectorAll('.mc-opt')
+          .forEach(o => o.classList.remove('mc-sel','mc-correct','mc-wrong'));
+        if (sel) {
+          if (sel.dataset.v === opts.dataset.answer) {
+            sel.classList.add('mc-correct'); correct++;
+          } else {
+            sel.classList.add('mc-wrong');
+          }
+        }
+      });
+
+    // VF
+    container.querySelectorAll('tr[data-answer][data-section="' + section + '"]')
+      .forEach(row => {
+        total++;
+        const sel = row.querySelector('.vfb-sel');
+        row.querySelectorAll('.vfb')
+          .forEach(b => b.classList.remove('vfb-sel','vfb-correct','vfb-wrong'));
+        if (sel) {
+          if (sel.dataset.val === row.dataset.answer) {
+            sel.classList.add('vfb-correct'); correct++;
+          } else {
+            sel.classList.add('vfb-wrong');
+          }
+        }
+      });
+  }
+
+  // Visa resultat
+  const el = document.getElementById('rr-' + mod + '-' + section);
+  if (!el) return;
+
+  if (total === 0) {
+    el.innerHTML = '<div class="rr-msg">Svara på frågorna ovan först!</div>';
+    el.className = 'ratta-result rr-try rr-show'; return;
+  }
+
+  let msg, cls;
+  if (correct === total) {
+    msg = '🎉 Perfekt! Alla rätt!';
+    cls = 'rr-perfect';
+  } else {
+    const msgs = [
+      '💪 Bra försök! Ändra de röda och försök igen!',
+      '🎯 Nästan! Kolla de röda och kör om!',
+      '🔥 Du klarar det! Försök med de röda igen!',
+    ];
+    msg = msgs[Math.floor(Math.random()*msgs.length)];
+    cls = (correct/total) >= 0.7 ? 'rr-good' : 'rr-try';
+  }
+
+  el.innerHTML =
+    '<div class="rr-score">' + correct + ' / ' + total + '</div>' +
+    '<div class="rr-msg">' + msg + '</div>';
+  el.className = 'ratta-result ' + cls + ' rr-show';
+}
+
+// ── GRAMMATIK: visa/dölj svar ─────────────────────────────
+function toggleAns(id) {
+  const panel = document.getElementById(id);
+  const btn   = panel ? panel.previousElementSibling : null;
+  if (!panel) return;
+  const open = panel.classList.toggle('ap-open');
+  if (btn) btn.textContent = open ? '🙈 Dölj svar' : '👁 Visa svar';
+}
+
+// ── LJUD-HJÄLP MODAL ─────────────────────────────────────
+function openAudioModal() {
+  document.getElementById('audio-modal').classList.add('mo-open');
+  document.body.style.overflow = 'hidden';
+}
+function closeAudioModal() {
+  document.getElementById('audio-modal').classList.remove('mo-open');
+  document.body.style.overflow = '';
+}
+function closeModal(e) {
+  if (e.target === document.getElementById('audio-modal')) closeAudioModal();
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeAudioModal();
+});
+
+// ── AUDIO-FEL: visa hjälpmeddelande om fil saknas ─────────
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('audio').forEach(a => {
+    a.addEventListener('error', () => {
+      // Skapa felmeddelande om det inte redan finns
+      let err = a.nextElementSibling;
+      if (!err || !err.classList.contains('audio-err')) {
+        err = document.createElement('div');
+        err.className = 'audio-err';
+        err.innerHTML =
+          '⚠ Ljudfilen hittades inte. ' +
+          '<button style="background:none;border:none;color:#c05000;' +
+          'text-decoration:underline;cursor:pointer;font-size:.78rem;padding:0" ' +
+          'onclick="openAudioModal()">Hur fixar jag det?</button>';
+        a.parentNode.insertBefore(err, a.nextSibling);
+      }
+      err.classList.add('ae-show');
+    }, true);
+  });
+});
+
+</script>
+
+<!-- ── LJUD-HJÄLP MODAL ── -->
+<div class="modal-overlay" id="audio-modal" onclick="closeModal(event)">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h3>🔊 Hur fungerar ljudet?</h3>
+      <button class="modal-close" onclick="closeAudioModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-note">
+        <strong>Viktigt:</strong> För att hörövningarna ska fungera måste
+        HTML-filen och ljudmappen ligga i <strong>samma mapp</strong> på
+        din dator.
+      </div>
+      <ol class="modal-steps">
+        <li>
+          <span class="step-circle">1</span>
+          <span>Ladda ned <strong>zip-filen</strong> från din lärare
+          (eller från Google Drive-länken du fått).</span>
+        </li>
+        <li>
+          <span class="step-circle">2</span>
+          <span><strong>Packa upp</strong> zip-filen — högerklicka →
+          <em>Extrahera alla</em> (Windows) eller dubbelklicka (Mac).</span>
+        </li>
+        <li>
+          <span class="step-circle">3</span>
+          <span>Öppna mappen. Du ska se filen
+          <code>hafte_spanska4.html</code> och en mapp som heter
+          <code></code> — båda i samma mapp.</span>
+        </li>
+        <li>
+          <span class="step-circle">4</span>
+          <span>Dubbelklicka på <code>hafte_spanska4.html</code> för att
+          öppna häftet i webbläsaren. Ljudet startar automatiskt när du
+          trycker ▶.</span>
+        </li>
+        <li>
+          <span class="step-circle">5</span>
+          <span><strong>Fungerar det ändå inte?</strong> Prova att öppna
+          filen i <em>Chrome</em> eller <em>Firefox</em> — Safari kan
+          ibland blockera lokala ljudfiler.</span>
+        </li>
+      </ol>
+    </div>
+    <div class="modal-footer">
+      Fråga din lärare om du inte har fått zip-filen ännu.
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
